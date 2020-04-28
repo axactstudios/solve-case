@@ -17,7 +17,10 @@
             </intent-filter>
         </activity>
 
-<activity android:name=".SecondActivity"></activity>        <meta-data
+<activity android:name=".SecondActivity"></activity>
+        <activity android:name=".FirstYearSubjects"></activity>
+        <activity android:name=".SecondYearSubjects"></activity>
+        <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
