@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,31 +12,21 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="225dp"
-        android:layout_marginBottom="626dp"
+        android:layout_marginBottom="500dp"
         android:fontFamily="@font/montserrat"
         android:text="Subject"
         android:textColor="#FFFFFF"
-        android:textSize="32sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="32sp" />
 
     <RadioGroup
         android:id="@+id/yearGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498">
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="20dp">
 
 
         <RadioButton
@@ -143,18 +133,14 @@
         android:id="@+id/choose_subject_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="278dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="600dp"
         android:background="@drawable/cutom_button"
         android:fontFamily="@font/montserrat"
         android:padding="5dp"
         android:text="Search"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.929"></Button>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        tools:layout_editor_absoluteX="260dp"
+        tools:layout_editor_absoluteY="537dp"></Button>
+</RelativeLayout>
