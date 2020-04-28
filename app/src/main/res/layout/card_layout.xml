@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="5dp"
+    app:cardCornerRadius="10dp"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#11313E"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/fileName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat"
+            android:text="File Name"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            />
+
+        <ImageButton
+            android:id="@+id/downloadButton"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@android:drawable/stat_sys_download"
+            android:tint="#eeeeee"
+            android:background="#11313E"
+            />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
