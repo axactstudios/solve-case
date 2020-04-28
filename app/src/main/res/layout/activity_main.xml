@@ -6,36 +6,62 @@
     android:layout_height="match_parent"
     android:background="#031C32"
     tools:context=".MainActivity">
+
     <LinearLayout
+        android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-    <ImageButton
-        android:id="@+id/logo"
-        android:layout_width="101dp"
-        android:layout_height="105dp"
-android:background="@drawable/custom_logo"
-        android:contentDescription="@string/logo"
-        android:src="@drawable/ic_solvecaselogo"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.457">
+        app:layout_constraintTop_toTopOf="parent">
 
-    </ImageButton>
+        <ImageButton
 
-        <TextView
+            android:layout_width="101dp"
+            android:layout_height="105dp"
+            android:background="@drawable/custom_logo"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/ic_solvecaselogo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.457">
+
+        </ImageButton>
+
+        <LinearLayout
             android:layout_width="144dp"
             android:layout_height="match_parent"
-            android:ellipsize="none"
-            android:gravity="center"
-            android:scrollHorizontally="false"
-            android:text="Solve Case                    U name it, We have it"
-            android:textColor="#ffffff"
-            android:textSize="14dp">
+            android:orientation="vertical"
+            android:weightSum="2">
 
-        </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:gravity="bottom"
+                android:text="solve-case"
+                android:textColor="#ffffff"
+                android:textSize="28dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:text="U name it, We have it"
+                android:textColor="#ffffff"
+                android:textSize="13dp">
+
+            </TextView>
+        </LinearLayout>
+
 
     </LinearLayout>
     <TextView
