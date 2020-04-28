@@ -31,13 +31,14 @@
             android:textStyle="bold"
             />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/downloadButton"
             android:layout_width="30dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:src="@android:drawable/stat_sys_download"
             android:tint="#eeeeee"
+            android:background="#11313E"
             />
 
     </LinearLayout>
