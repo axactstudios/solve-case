@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">jiitSolutions</string>
     <string name="jiit_solutions">Jiit Solutions</string>
+    <string name="logo">logo</string>
+    <string name="a_joint_effort_for_students">A joint effort for students...</string>
+    <string name="by_students">by students</string>
     <string-array name="spinner_items">
         <item>Item 1</item>
         <item>Item 1</item>

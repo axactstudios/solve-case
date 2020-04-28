@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
-import android.widget.Toast
+
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Exception
 
@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val background = object : Thread(){
             override fun run() {
                 try{
-                    Thread.sleep(5000)
+                    sleep(5000)
 
                     val intent= Intent(baseContext,SecondActivity::class.java)
                     startActivity(intent)

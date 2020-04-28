@@ -4,10 +4,10 @@
     android:startOffset="2500">
     <translate
         android:fromYDelta="-1622"
-        android:toYDelta="0"/>
+        android:toYDelta="0" />
     <alpha
         android:fromAlpha="0"
-        android:toAlpha="1.0"/>
+        android:toAlpha="1.0" />
 
 
 </set>
