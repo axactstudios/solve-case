@@ -14,7 +14,7 @@ class FileListScreen:AppCompatActivity()
 
         setContentView(R.layout.file_list_screen)
 
-//        fetchingFiles()
+
         val layoutManager=LinearLayoutManager(this)
         layoutManager.orientation=LinearLayoutManager.VERTICAL
         recyclerView.layoutManager=layoutManager
@@ -24,7 +24,25 @@ class FileListScreen:AppCompatActivity()
         }
 
         public fun fetchingFiles(){
-        val ref= FirebaseDatabase.getInstance().getReference("file")
+// Create a storage reference from our app
+            var storageRef = storage.reference
+            val storage = Firebase.storage
+            val listRef = storage.reference.child("gs://solve-case123.appspot.com/FirstYear/Physics")
+
+            listRef.listAll()
+                .addOnSuccessListener { listResult ->
+                    listResult.prefixes.forEach { prefix ->
+                    prefix.
+                    }
+
+                    listResult.items.forEach { item ->
+                        // All the items under listRef.
+                    }
+                }
+                .addOnFailureListener {
+                    // Uh-oh, an error occurred!
+                }
+
 
         }
 }
