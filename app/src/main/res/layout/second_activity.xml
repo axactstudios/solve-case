@@ -4,7 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#11313E">
+    android:background="#11313E"
+    android:padding="20dp
+">
+
+    <RadioGroup
+        android:id="@+id/yearGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448">
+
+        <RadioButton
+            android:id="@+id/firstYear"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:padding="10dp"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/secondYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:padding="10dp"
+            android:text="2"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+
+
+    </RadioGroup>
 
     <TextView
         android:id="@+id/textView"
@@ -12,6 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="69dp"
         android:layout_marginEnd="278dp"
+        android:fontFamily="@font/montserrat"
         android:text="Year"
         android:textColor="#FFFFFF"
         android:textSize="32sp"
@@ -20,7 +60,26 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.241" />
+        app:layout_constraintVertical_bias="0.325" />
+
+    <Button
+        android:id="@+id/choose_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/cutom_button"
+        android:fontFamily="@font/montserrat"
+        android:padding="5dp"
+        android:text="Choose Subject"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.729" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
