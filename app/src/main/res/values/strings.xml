@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">jiitSolutions</string>
     <string name="jiit_solutions">Jiit Solutions</string>
+    <string-array name="spinner_items">
+        <item>Item 1</item>
+        <item>Item 1</item>
+        <item>Item 1</item>
+        <item>Item 1</item>
+        <item>Item 1</item>
+    </string-array>
 </resources>
