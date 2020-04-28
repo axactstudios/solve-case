@@ -30,7 +30,7 @@
 
 
         <RadioButton
-            android:id="@+id/sdf"
+            android:id="@+id/ds"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
@@ -41,7 +41,7 @@
             android:textSize="24sp" />
 
         <RadioButton
-            android:id="@+id/physics"
+            android:id="@+id/coa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -52,7 +52,7 @@
             android:textSize="24sp" />
 
         <RadioButton
-            android:id="@+id/maths"
+            android:id="@+id/es"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -63,7 +63,7 @@
             android:textSize="24sp" />
 
         <RadioButton
-            android:id="@+id/es"
+            android:id="@+id/prp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -74,7 +74,7 @@
             android:textSize="24sp" />
 
         <RadioButton
-            android:id="@+id/sdflab"
+            android:id="@+id/coaLab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -85,7 +85,7 @@
             android:textSize="24sp" />
 
         <RadioButton
-            android:id="@+id/pvlab"
+            android:id="@+id/ls"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
