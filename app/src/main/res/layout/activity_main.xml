@@ -4,24 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#11313E"
+    android:background="#031C32"
     tools:context=".MainActivity">
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
     <ImageButton
         android:id="@+id/logo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-
-        android:src="@drawable/solvacase"
+        android:layout_width="101dp"
+        android:layout_height="105dp"
+android:background="@drawable/custom_logo"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/ic_solvecaselogo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.457"
-        android:contentDescription="@string/logo">
+        app:layout_constraintVertical_bias="0.457">
 
     </ImageButton>
 
+        <TextView
+            android:layout_width="144dp"
+            android:layout_height="match_parent"
+            android:ellipsize="none"
+            android:gravity="center"
+            android:scrollHorizontally="false"
+            android:text="Solve Case                    U name it, We have it"
+            android:textColor="#ffffff"
+            android:textSize="14dp">
+
+        </TextView>
+
+    </LinearLayout>
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
