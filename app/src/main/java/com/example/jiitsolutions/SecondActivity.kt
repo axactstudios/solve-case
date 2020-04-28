@@ -22,11 +22,12 @@ class SecondActivity : AppCompatActivity(){
             Toast.makeText(this,"You Selected"+radioButton.text,Toast.LENGTH_SHORT).show()
             if(radioButton.text=="1")
             {
-                val intent= Intent(this,SecondActivity::class.java)
+                val intent= Intent(this,FirstYearSubjects::class.java)
                 startActivity(intent)
             }
-            else{
-
+            else if(radioButton.text=="2"){
+                val intent= Intent(this,SecondYearSubjects::class.java)
+                startActivity(intent)
             }
         }
 
