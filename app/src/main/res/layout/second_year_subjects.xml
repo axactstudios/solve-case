@@ -38,7 +38,8 @@
             android:padding="10dp"
             android:text="Digital Systems"
             android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/coa"
@@ -49,7 +50,8 @@
             android:padding="10dp"
             android:text="Comp Organisation And Architecture"
             android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/es"
@@ -60,7 +62,8 @@
             android:padding="10dp"
             android:text="Environmental Science"
             android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/prp"
@@ -71,7 +74,8 @@
             android:padding="10dp"
             android:text="Probability and Random Processes"
             android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/coaLab"
@@ -82,7 +86,8 @@
             android:padding="10dp"
             android:text="COA Lab"
             android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/ls"
@@ -93,7 +98,8 @@
             android:padding="10dp"
             android:text="Life Skills"
             android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
 
     </RadioGroup>
 

@@ -38,7 +38,8 @@
             android:padding="10dp"
             android:text="SDF"
             android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/physics"
@@ -49,7 +50,8 @@
             android:padding="10dp"
             android:text="Physics"
             android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/maths"
@@ -60,7 +62,8 @@
             android:padding="10dp"
             android:text="Maths"
             android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/es"
@@ -71,7 +74,8 @@
             android:padding="10dp"
             android:text="Electrical Science"
             android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/sdflab"
@@ -82,7 +86,8 @@
             android:padding="10dp"
             android:text="SDF Lab"
             android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/pvlab"
@@ -93,7 +98,8 @@
             android:padding="10dp"
             android:text="Physics VLab"
             android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/esvlab"
@@ -104,7 +110,8 @@
             android:padding="10dp"
             android:text="Electrical Science VLab"
             android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/edd"
@@ -115,7 +122,8 @@
             android:padding="10dp"
             android:text="EDD"
             android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/workshop"
@@ -126,7 +134,8 @@
             android:padding="10dp"
             android:text="Workshop"
             android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
     </RadioGroup>
 
     <Button
