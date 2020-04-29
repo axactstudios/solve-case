@@ -21,6 +21,7 @@
         <activity android:name=".FirstYearSubjects"></activity>
         <activity android:name=".SecondYearSubjects"></activity>
         <activity android:name=".FileListScreen"></activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
