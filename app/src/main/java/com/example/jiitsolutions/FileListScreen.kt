@@ -21,6 +21,10 @@ Toast.makeText(this,"Trial",Toast.LENGTH_LONG).show()
         layoutManager.orientation=LinearLayoutManager.VERTICAL
         recyclerView.layoutManager=layoutManager
 
+        val bundle: Bundle? = intent.extras
+        val sub = bundle!!.getString("subid")
+        Toast.makeText(this,sub,Toast.LENGTH_SHORT).show()
+
         val adapter=FileAdapter(this,fileList.Files)
         recyclerView.adapter=adapter
         }
