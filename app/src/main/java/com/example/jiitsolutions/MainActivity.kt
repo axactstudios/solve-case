@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val background = object : Thread(){
             override fun run() {
                 try{
-                    sleep(5000)
+                    sleep(4000)
 
                     val intent= Intent(baseContext,SecondActivity   ::class.java)
                     startActivity(intent)
@@ -26,11 +26,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
         background.start()
-                val anim = AnimationUtils.loadAnimation(this,R.anim.anim)
-        val anim2 = AnimationUtils.loadAnimation(this, R.anim.anim2)
-        logo.startAnimation(anim)
-        textView3.startAnimation(anim2)
-        textView2.startAnimation(anim2)
+                val anim = AnimationUtils.loadAnimation(this,R.anim.top)
+        val anim2 = AnimationUtils.loadAnimation(this, R.anim.bottom)
+        logo1.startAnimation(anim)
+        developer.startAnimation(anim2)
+
 
 
 
