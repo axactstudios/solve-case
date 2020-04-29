@@ -1,10 +1,14 @@
 package com.example.jiitsolutions
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.ktx.storage
 import kotlinx.android.synthetic.main.file_list_screen.*
 
 class FileListScreen:AppCompatActivity()
@@ -13,8 +17,6 @@ class FileListScreen:AppCompatActivity()
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.file_list_screen)
-
-
         val layoutManager=LinearLayoutManager(this)
         layoutManager.orientation=LinearLayoutManager.VERTICAL
         recyclerView.layoutManager=layoutManager
@@ -23,26 +25,5 @@ class FileListScreen:AppCompatActivity()
         recyclerView.adapter=adapter
         }
 
-        public fun fetchingFiles(){
-// Create a storage reference from our app
-            var storageRef = storage.reference
-            val storage = Firebase.storage
-            val listRef = storage.reference.child("gs://solve-case123.appspot.com/FirstYear/Physics")
-
-            listRef.listAll()
-                .addOnSuccessListener { listResult ->
-                    listResult.prefixes.forEach { prefix ->
-                    prefix.
-                    }
-
-                    listResult.items.forEach { item ->
-                        // All the items under listRef.
-                    }
-                }
-                .addOnFailureListener {
-                    // Uh-oh, an error occurred!
-                }
-
 
         }
-}

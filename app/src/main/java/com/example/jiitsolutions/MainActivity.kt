@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
                 try{
                     sleep(5000)
 
-                    val intent= Intent(baseContext,SecondActivity::class.java)
+                    val intent= Intent(baseContext,SecondActivity   ::class.java)
                     startActivity(intent)
                 } catch(e : Exception){
                     e.printStackTrace()
