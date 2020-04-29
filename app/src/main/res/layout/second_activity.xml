@@ -31,7 +31,8 @@
             android:padding="10dp"
             android:text="1"
             android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/secondYear"
@@ -41,7 +42,8 @@
             android:padding="10dp"
             android:text="2"
             android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
 
 
     </RadioGroup>

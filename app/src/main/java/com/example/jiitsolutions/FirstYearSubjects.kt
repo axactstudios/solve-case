@@ -17,6 +17,10 @@ class FirstYearSubjects :AppCompatActivity() {
         setContentView(R.layout.first_year_subjects)
         var result = ""
 
+        val bundle: Bundle? = intent.extras
+        val year = bundle!!.getString("yearid")
+        Toast.makeText(this,year,Toast.LENGTH_SHORT).show()
+
         result = fetchingFiles()
         Toast.makeText(this, result, Toast.LENGTH_LONG).show()
 
