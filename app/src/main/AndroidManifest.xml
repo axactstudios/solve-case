@@ -17,10 +17,10 @@
             </intent-filter>
         </activity>
 
-<activity android:name=".SecondActivity"></activity>
-        <activity android:name=".FirstYearSubjects"></activity>
-        <activity android:name=".SecondYearSubjects"></activity>
-        <activity android:name=".FileListScreen"></activity>
+        <activity android:name=".SecondActivity" />
+        <activity android:name=".FirstYearSubjects" />
+        <activity android:name=".SecondYearSubjects" />
+        <activity android:name=".FileListScreen" />
 
         <meta-data
             android:name="preloaded_fonts"
