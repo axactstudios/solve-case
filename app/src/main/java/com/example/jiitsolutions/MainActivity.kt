@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
                     val intent= Intent(baseContext,SecondActivity   ::class.java)
                     startActivity(intent)
+                    finish()
                 } catch(e : Exception){
                     e.printStackTrace()
                 }
