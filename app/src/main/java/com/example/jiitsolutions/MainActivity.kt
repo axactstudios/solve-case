@@ -4,12 +4,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
+import com.google.firebase.auth.FirebaseAuth
 
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Exception
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -18,7 +20,7 @@ class MainActivity : AppCompatActivity() {
                 try{
                     sleep(4000)
 
-                    val intent= Intent(baseContext,SecondActivity   ::class.java)
+                    val intent= Intent(baseContext,LoginActivity::class.java)
                     startActivity(intent)
                     finish()
                 } catch(e : Exception){
