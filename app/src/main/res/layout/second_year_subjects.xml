@@ -11,6 +11,7 @@
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:layout_marginTop="200sp"
         android:layout_marginBottom="200sp"
         android:layout_weight="1"
@@ -19,3 +20,5 @@
         android:textAlignment="center"
         android:textSize="54sp" />
 </LinearLayout>
+
+  
