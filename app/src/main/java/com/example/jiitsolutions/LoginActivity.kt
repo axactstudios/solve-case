@@ -18,10 +18,12 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         auth = FirebaseAuth.getInstance()
         val btnSignUp: Button? = findViewById<Button>(R.id.btn_sign_up)
-        btnSignUp!!.setOnClickListener {
+        btnSignUp?.let{
+            btnSignUp.setOnClickListener {
             Log.i("MainActivity", "Hello was clicked!")
-            startActivity(Intent(this,SignupActivity::class.java))
+            startActivity(Intent(this, SignupActivity::class.java))
             finish()
+        }
 
         }
         btn_log_in.setOnClickListener {

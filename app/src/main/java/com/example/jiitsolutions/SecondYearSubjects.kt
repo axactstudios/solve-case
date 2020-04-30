@@ -11,9 +11,6 @@ class SecondYearSubjects :AppCompatActivity(){
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.second_year_subjects)
-      choose_subject_2.setOnClickListener {
-          val intent= Intent(this,FileListScreen::class.java)
-          startActivity(intent)
-      }
+
     }
 }

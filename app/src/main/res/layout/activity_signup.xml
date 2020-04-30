@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#031C32"
-
     tools:context=".LoginActivity">
 
     <LinearLayout
@@ -16,12 +14,10 @@
         android:padding="16dp">
 
         <ImageView
-            android:layout_width="151dp"
-            android:layout_height="142dp"
-            android:layout_gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:src="@drawable/logo3"
-            app:srcCompat="@drawable/logo3"
-            android:contentDescription="@string/logo4" />
+            android:layout_gravity="center"/>
 
         <EditText
             android:id="@+id/tv_username"
@@ -29,8 +25,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/email"
             android:textColorHint="#FFFFFF"
-            android:inputType="textEmailAddress"
-            android:autofillHints="" />
+            android:inputType="textEmailAddress"/>
 
         <EditText
             android:id="@+id/tv_password"
@@ -38,10 +33,9 @@
             android:layout_height="wrap_content"
             android:hint="@string/password"
             android:textColorHint="#FFFFFF"
-            android:inputType="textPassword"
-            android:autofillHints="" />
+            android:inputType="textPassword"/>
         <Button
-            android:id="@+id/btn_log_in"
+            android:id="@+id/btn_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryDark"
@@ -53,8 +47,5 @@
             android:textAllCaps="false"
             />
     </LinearLayout>
-
-
-
 
 </RelativeLayout>
