@@ -1,24 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#031C32"
+    android:background="#11313E"
     android:padding="20dp">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="500dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Subject"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp" />
+
+    <RadioGroup
+        android:id="@+id/yearGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="20dp">
 
-        android:layout_marginTop="200sp"
-        android:layout_marginBottom="200sp"
-        android:layout_weight="1"
-        android:fontFamily="@font/poppins_bold"
-        android:text="Coming Soon!!"
-        android:textAlignment="center"
-        android:textSize="54sp" />
-</LinearLayout>
 
-  
+        <RadioButton
+            android:id="@+id/ds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:fontFamily="@font/montserrat"
+            android:padding="10dp"
+            android:text="Digital Systems"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/coa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/montserrat"
+            android:padding="10dp"
+            android:text="Comp Organisation And Architecture"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/es"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/montserrat"
+            android:padding="10dp"
+            android:text="Environmental Science"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/prp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/montserrat"
+            android:padding="10dp"
+            android:text="Probability and Random Processes"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/coaLab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/montserrat"
+            android:padding="10dp"
+            android:text="COA Lab"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/ls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/montserrat"
+            android:padding="10dp"
+            android:text="Life Skills"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:onClick="onRadioButtonClicked"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/choose_subject_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="600dp"
+        android:background="@drawable/cutom_button"
+        android:fontFamily="@font/montserrat"
+        android:padding="5dp"
+        android:text="Search"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="260dp"
+        tools:layout_editor_absoluteY="537dp"></Button>
+</RelativeLayout>

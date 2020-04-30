@@ -1,28 +1,26 @@
 package com.example.jiitsolutions
 
 import android.content.Intent
-
-import android.os.Bundle
-import android.util.Log
-import android.util.Patterns
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.util.Patterns
+import android.widget.Button
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_signup.*
+import kotlinx.android.synthetic.main.activity_login.*
+
+import kotlinx.android.synthetic.main.activity_main.*
 
 class SignupActivity : AppCompatActivity() {
-
     private lateinit var auth: FirebaseAuth
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
         auth = FirebaseAuth.getInstance()
-
-        btn_sign_up.setOnClickListener {
+        val btnSignUp: Button? = findViewById<Button>(R.id.btn_sign_up)
+        btnSignUp!!.setOnClickListener {
             signUpUser()
         }
-
     }
 
     private fun signUpUser() {
@@ -43,24 +41,27 @@ class SignupActivity : AppCompatActivity() {
             tv_password.requestFocus()
             return
         }
-
-        auth.createUserWithEmailAndPassword(tv_username.text.toString(), tv_password.text.toString())
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    val user = auth.currentUser
-                    user?.sendEmailVerification()
-                        ?.addOnCompleteListener { task ->
-                            if (task.isSuccessful) {
-                                startActivity(Intent(this, LoginActivity::class.java))
-                                finish()
-                            }
-                        }
-                } else {
-                    Toast.makeText(
-                        baseContext, "Sign Up failed. Try again after some time.",
-                        Toast.LENGTH_SHORT
-                    ).show()
+            auth.createUserWithEmailAndPassword(
+                tv_username.text.toString(),
+                tv_password.text.toString()
+            )
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        startActivity(Intent(this, LoginActivity::class.java))
+                        Toast.makeText(
+                            baseContext, "Sign Up success. Please log in.",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        finish()
+                    } else {
+                        Toast.makeText(
+                            baseContext, "Sign Up failed. Try again after some time.",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
                 }
-            }
+        }
     }
-}
+
+
+
