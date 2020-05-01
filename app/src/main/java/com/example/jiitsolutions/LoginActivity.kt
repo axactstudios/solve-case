@@ -72,7 +72,7 @@ class LoginActivity : AppCompatActivity() {
 
         if (currentUser != null) {
 
-                startActivity(Intent(this, SecondActivity::class.java))
+                startActivity(Intent(this, WelcomeScreen::class.java))
                 finish()
         }
 
