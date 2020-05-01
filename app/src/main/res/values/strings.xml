@@ -26,4 +26,6 @@
     <string name="dont_have_account">Don\'t have an account?</string>
     <string name="SignUp">Sign Up</string>
     <string name="logo4">Logo</string>
+    <string name="web_client_id">xxxxxxxx..place your web client id here</string>
+    <string name="other_sign_in_options">Other Sign-in Options</string>
 </resources>
