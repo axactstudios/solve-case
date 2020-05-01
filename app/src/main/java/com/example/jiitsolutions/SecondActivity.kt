@@ -9,11 +9,25 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.second_activity.*
 
 class SecondActivity : AppCompatActivity() {
-
+    var yearCode="1"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.second_activity)
+        choose_subject.setOnClickListener {
+            if(yearCode=="1") {
+                val intent = Intent(this, FirstYearSubjects::class.java)
+                intent.putExtra("yearcode", "FirstYear")
+                Toast.makeText(this, "You have selected $yearCode year", Toast.LENGTH_SHORT).show()
+                startActivity(intent)
+            }
+            else{
+                val intent = Intent(this, SecondYearSubjects::class.java)
+                intent.putExtra("yearcode", "SecondYear")
+                Toast.makeText(this, "You have selected $yearCode year", Toast.LENGTH_SHORT).show()
+                startActivity(intent)
+            }
+        }
 
     }
 
@@ -24,20 +38,14 @@ class SecondActivity : AppCompatActivity() {
             when (view.getId()) {
                 R.id.firstYear ->
                     if (checked) {
-                        val intent = Intent(this, FirstYearSubjects::class.java)
-                        intent.putExtra("yearid", "firstYear")
-                        Toast.makeText(this, "You have selected first year", Toast.LENGTH_SHORT).show()
-                        startActivity(intent)
+                        yearCode="1"
                     }
                 R.id.secondYear ->
                     if (checked) {
-                        val intent = Intent(this, SecondYearSubjects::class.java)
-                        intent.putExtra("yearid", "secondYear")
-                        Toast.makeText(this, "You have selected second year", Toast.LENGTH_SHORT).show()
-                        startActivity(intent)
+                        yearCode="2"
                     }
-                }
             }
+        }
 
     }
 }
