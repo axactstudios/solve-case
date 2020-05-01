@@ -41,31 +41,37 @@
             android:textColorHint="#FFFFFF"
             android:inputType="textPassword"
             android:autofillHints="Password" />
+
         <Button
             android:id="@+id/btn_log_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:background="@color/colorPrimaryDark"
             android:padding="16dp"
             android:text="@string/login"
-            android:textSize="18sp"
-            android:layout_marginTop="10dp"
-            android:textColor="@android:color/white"
             android:textAllCaps="false"
-            />
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
 
 
     </LinearLayout>
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/btn_google_signin"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_sign_up"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="142dp"
         android:layout_marginLeft="11dp"
-        android:layout_marginTop="324dp"
-        android:layout_marginRight="11dp" />
+        android:layout_marginTop="335dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="285dp"
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/btn_sign_up"
