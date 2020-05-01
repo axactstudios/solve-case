@@ -1,5 +1,8 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.jiitsolutions
 
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,16 +10,68 @@ import android.util.Log
 import android.util.Patterns
 import android.widget.Button
 import android.widget.Toast
+import com.google.android.gms.auth.api.Auth
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.ConnectionResult
+import com.google.android.gms.common.api.GoogleApiClient
+import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.GoogleAuthProvider
+import dmax.dialog.SpotsDialog
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_login.btn_google_signin
 
-class LoginActivity : AppCompatActivity() {
-    private lateinit var auth : FirebaseAuth
+class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
+
+    companion object {
+        private val PERMISSION_CODE = 2304;
+    }
+
+    lateinit var mGooogleApiClient : GoogleApiClient
+    lateinit var firebaseAuth: FirebaseAuth
+    lateinit var alertDialog: AlertDialog
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(requestCode == PERMISSION_CODE)
+        {
+            val result = Auth.GoogleSignInApi.getSignInResultFromIntent(data)
+            if(result!!.isSuccess)
+            {
+                val account = result!!.signInAccount
+                val idToken = account!!.idToken
+                val credential = GoogleAuthProvider.getCredential(idToken,null)
+                firebaseAuthWithGoogle(credential)
+            }
+            else
+            {
+                Log.d("ERROR","Login Failed")
+                Toast.makeText(this,"Login Failed",Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun firebaseAuthWithGoogle(credential: AuthCredential) {
+        firebaseAuth!!.signInWithCredential(credential)
+            .addOnSuccessListener {authResult ->
+                val logged_email = authResult.user!!.email
+                val logged_activity = Intent(this@LoginActivity,SecondActivity::class.java)
+                startActivity(logged_activity)
+            }
+            .addOnFailureListener {
+                    e-> Toast.makeText(this,""+e.message,Toast.LENGTH_SHORT).show()
+            }
+    }
+
+    lateinit var auth : FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
         auth = FirebaseAuth.getInstance()
+
         val btnSignUp: Button? = findViewById<Button>(R.id.btn_sign_up)
         btnSignUp?.let{
             btnSignUp.setOnClickListener {
@@ -26,12 +81,27 @@ class LoginActivity : AppCompatActivity() {
         }
 
         }
+
         btn_log_in.setOnClickListener {
             doLogin()
             Log.i("MainActivity", "Button was clicked!")
         }
 
+        configureGoogleClient()
+
+        firebaseAuth = FirebaseAuth.getInstance()
+
+        alertDialog = SpotsDialog.Builder()
+            .setContext(this)
+            .setMessage("Please wait")
+            .setCancelable(false)
+            .build()
+
+        btn_google_signin.setOnClickListener {
+            signIn()
+        }
     }
+
     private fun doLogin() {
         if (tv_username.text.toString().isEmpty()) {
             tv_username.error = "Please enter email"
@@ -62,12 +132,14 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
     }
+
     public override fun onStart() {
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
         updateUI(currentUser)
     }
+
     private fun updateUI(currentUser: FirebaseUser?) {
 
         if (currentUser != null) {
@@ -86,6 +158,26 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    private fun signIn() {
+        val intent = Auth.GoogleSignInApi.getSignInIntent(mGooogleApiClient)
+        startActivityForResult(intent, LoginActivity.PERMISSION_CODE)
+    }
+
+    private fun configureGoogleClient() {
+        val options = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+        mGooogleApiClient = GoogleApiClient.Builder(this)
+            .enableAutoManage(this,this)
+            .addApi(Auth.GOOGLE_SIGN_IN_API,options)
+            .build()
+        mGooogleApiClient.connect()
+    }
+
+    override fun onConnectionFailed(p0: ConnectionResult) {
+        Toast.makeText(this,""+p0.errorMessage,Toast.LENGTH_SHORT).show()
+    }
 
 }
 
