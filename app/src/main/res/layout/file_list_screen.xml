@@ -3,10 +3,27 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="10dp"
+    android:weightSum="10"
+ >
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:text="Downloads Available..."
+    android:textColor="@android:color/black"
+    android:background="@android:color/white"
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:textSize="24dp"
+    android:fontFamily="@font/montserrat"></TextView>
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        android:layout_weight="9"
+/>
 </LinearLayout>
