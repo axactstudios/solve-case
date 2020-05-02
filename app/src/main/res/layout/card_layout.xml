@@ -19,7 +19,7 @@
         android:padding="5dp">
 
         <TextView
-            android:id="@+id/fileName"
+            android:id="@+id/title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -31,7 +31,7 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/downloadButton"
             android:layout_width="30dp"
             android:layout_height="match_parent"
