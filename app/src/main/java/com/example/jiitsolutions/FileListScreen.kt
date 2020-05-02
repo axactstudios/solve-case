@@ -1,86 +1,133 @@
 package com.example.jiitsolutions
 
+import android.Manifest
+import android.content.Context
+import android.os.AsyncTask
+import android.os.Build
 import android.os.Bundle
+import android.os.Environment
 import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.multidex.MultiDex
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.file_list_screen.*
+import java.io.BufferedInputStream
+import java.io.FileOutputStream
+import java.net.URL
 
-class FileListScreen:AppCompatActivity()
-{
+class FileListScreen:AppCompatActivity() {
+    override fun attachBaseContext(base: Context?) {
+        super.attachBaseContext(base)
+        MultiDex.install(this)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.file_list_screen)
-            val bundle: Bundle? = intent.extras
-            val yearFolder = bundle!!.getString("yearid")
-            val subjectFolder=bundle!!.getString("subid")
-            val filenames=ArrayList<String>()
-            // var filenames: MutableList<String> = mutableListOf<String>()
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.file_list_screen)
+        val bundle: Bundle? = intent.extras
+        val yearFolder = bundle!!.getString("yearid")
+        val subjectFolder = bundle!!.getString("subid")
+        val filenames = ArrayList<String>()
 
-            var str="Default"
+        val db = FirebaseFirestore.getInstance()
+        val fileurls = ArrayList<String>()
 
-            val ref= FirebaseDatabase.getInstance().getReference("/files/FirstYear/workshop")
-            ref.addListenerForSingleValueEvent(object :ValueEventListener{
-                    override fun onCancelled(p0: DatabaseError) {
-                            Toast.makeText(this@FileListScreen,"Kuch ni hua bro",Toast.LENGTH_LONG).show()
 
-                    }
+        var str = ""
+        db.collection("FirstYear").document(subjectFolder.toString()).collection("files")
 
-                    override fun onDataChange(p0: DataSnapshot) {
-                    if(p0!!.exists()){
+            .get()
+            .addOnSuccessListener { documents ->
+                for (document in documents) {
+                    str = document.getString("fname").toString()
+               //     Toast.makeText(this, str, Toast.LENGTH_LONG).show()
+                    fileurls.add(document.getString("furl").toString())
+                    filenames.add(str)
+                }
 
-                            for (f in p0.children)
-                            {
-                                    val file=f.getValue(File::class.java)
-                                   // var fileNameToAddToList=file!!.fname
-                                    //filenames.add(fileNameToAddToList)
-                                    //Log.d("YearList",file.fname)
-                                    if (file != null) {
-                                            str=file.fname
-                                    }
-                                    else{
-                                            str="Bakaiti"
-                                    }
-                                    Toast.makeText(this@FileListScreen,file!!.fname,Toast.LENGTH_LONG).show()
-                            }
-                    }
 
-                    }
-            })
 
-            filenames.add("hbcsyuc")
-            filenames.add(str)
-            filenames.add("hbcsyuc")
-            filenames.add("hbcsyuc")
-            filenames.add("hbcsyuc")
-            filenames.add("hbcsyuc")
+                val myListAdapter = MyListAdapter(this, filenames)
+                listView.adapter = myListAdapter
 
-            val myListAdapter = MyListAdapter(this,filenames)
-            listView.adapter = myListAdapter
-
-            listView.setOnItemClickListener(){adapterView, view, position, id ->
-                    val itemAtPos = adapterView.getItemAtPosition(position)
-                    val itemIdAtPos = adapterView.getItemIdAtPosition(position)
-                    Toast.makeText(this, "Click on item at $itemAtPos its item id $itemIdAtPos", Toast.LENGTH_LONG).show()
+            }
+            .addOnFailureListener { exception ->
+                Toast.makeText(this, "Tumse na ho pai", Toast.LENGTH_LONG).show()
             }
 
 
 
+        listView.setOnItemClickListener() { adapterView, view, position, id ->
+            val itemAtPos = adapterView.getItemAtPosition(position)
+            val itemIdAtPos = adapterView.getItemIdAtPosition(position)
+          //  Toast.makeText(this, "$fileurls[$itemIdAtPos]", Toast.LENGTH_SHORT).show()
 
-    }
+
+            var storageRef = FirebaseStorage.getInstance().reference.child("file/FirstYear/$subjectFolder/").child(itemAtPos.toString())
+            storageRef.downloadUrl.addOnSuccessListener { uri ->
+                DownloadFileFromURL().execute(uri.toString(),itemAtPos.toString())
+Toast.makeText(this,"Download started...",Toast.LENGTH_SHORT).show()
+           //     Toast.makeText(this,storageRef.downloadUrl.toString(),Toast.LENGTH_LONG).show()
+            }
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                requestPermissions(arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), 0)
+            }
 
         }
-class File()
-{
-        val fname="null"
-        val fileURL="null"
+    }
+
+
+    inner class DownloadFileFromURL : AsyncTask<String?, String?, String?>() {
+
+        override fun doInBackground(vararg p0: String?): String? {
+            //file download path
+            val downloadFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).toString()
+
+            //image download url
+            val url = URL(p0[0])
+            val filename=p0[1].toString()
+            val conection = url.openConnection()
+            conection.connect()
+
+            // input stream to read file - with 8k buffer
+            val input = BufferedInputStream(url.openStream(), 8192)
+
+            // output stream to write file
+            val output = FileOutputStream(downloadFolder + "/$filename")
+            val data = ByteArray(1024)
+            var total = 0L
+
+            // writing data to file
+            var count : Int
+            while (input.read(data).also { count = it } != -1) {
+                total += count.toLong()
+
+                output.write(data, 0, count)
+            }
+            // flushing output
+            output.flush()
+            // closing streams
+            output.close()
+            input.close()
+
+            return null
+        }
+        override fun onPostExecute(result: String?) {
+            super.onPostExecute(result)
+            Toast.makeText(this@FileListScreen,"File Downloaded",Toast.LENGTH_LONG).show()
+        }
+    }
+
 }
+
+

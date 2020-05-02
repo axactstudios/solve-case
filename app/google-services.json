@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "402953466200-bbr5p22m5jr80ep8h3iidibg6hdourll.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jiitsolutions",
+            "certificate_hash": "f039ba87bc2d5fb36b1c8a0a98e030ba8abf5c87"
+          }
+        },
+        {
           "client_id": "402953466200-5g8r236556qc8u6chrhfnsj0hetklmc2.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -36,6 +44,125 @@
           "android_info": {
             "package_name": "com.example.jiitsolutions",
             "certificate_hash": "8835762b750348990b24e0277309328d54dc5a5a"
+          }
+        },
+        {
+          "client_id": "402953466200-f9r4luigclnlqipvjekkqsjqfrr3vri5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQ_HfxeZxS2BN-_WA3KvjyWfuYHbpnU1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402953466200-f9r4luigclnlqipvjekkqsjqfrr3vri5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402953466200:android:72bf61aa5215cedf74352d",
+        "android_client_info": {
+          "package_name": "com.example.kuchnaihora"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402953466200-630vj8148gb7gt43q3p5bvnhvhtf4le9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kuchnaihora",
+            "certificate_hash": "8835762b750348990b24e0277309328d54dc5a5a"
+          }
+        },
+        {
+          "client_id": "402953466200-f9r4luigclnlqipvjekkqsjqfrr3vri5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQ_HfxeZxS2BN-_WA3KvjyWfuYHbpnU1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402953466200-f9r4luigclnlqipvjekkqsjqfrr3vri5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402953466200:android:5402668fd8d456f974352d",
+        "android_client_info": {
+          "package_name": "com.example.scuploader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402953466200-hfd2er060uhipovv27kldj9675vonovc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.scuploader",
+            "certificate_hash": "8835762b750348990b24e0277309328d54dc5a5a"
+          }
+        },
+        {
+          "client_id": "402953466200-f9r4luigclnlqipvjekkqsjqfrr3vri5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQ_HfxeZxS2BN-_WA3KvjyWfuYHbpnU1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402953466200-f9r4luigclnlqipvjekkqsjqfrr3vri5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402953466200:android:643705f8bdeb29ef74352d",
+        "android_client_info": {
+          "package_name": "com.example.solvecaseuploader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402953466200-pv7jd33l78ik2hk3el416mppq1b8un7j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.solvecaseuploader",
+            "certificate_hash": "8835762b750348990b24e0277309328d54dc5a5a"
+          }
+        },
+        {
+          "client_id": "402953466200-immpn5rnoq4q24h05psei4b94ru21pcl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.solvecaseuploader",
+            "certificate_hash": "481029a45b4c289d717f5e90f55aaf8e361ebdf4"
           }
         },
         {
