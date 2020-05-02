@@ -13,21 +13,23 @@ import com.google.firebase.storage.ktx.storage
 import kotlinx.android.synthetic.main.first_year_subjects.*
 
 class FirstYearSubjects :AppCompatActivity() {
+var year:String="FirstYear"
+    var subject:String="sdf"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.first_year_subjects)
-        var result = ""
+
 
         val bundle: Bundle? = intent.extras
-        val year = bundle!!.getString("yearid")
-        Toast.makeText(this,year,Toast.LENGTH_SHORT).show()
+         year = bundle!!.getString("yearid").toString()
 
-        result = fetchingFiles()
-        Toast.makeText(this, result, Toast.LENGTH_LONG).show()
 
         choose_subject_1.setOnClickListener {
-            val intent = Intent(this, FileListScreen::class.java)
+            val intent = Intent(this,FileListScreen::class.java)
+            intent.putExtra("subid",subject)
+            intent.putExtra("yearid",year)
+            Toast.makeText(this,"You are viewing $subject",Toast.LENGTH_SHORT).show()
             startActivity(intent)
         }
     }
@@ -39,66 +41,39 @@ class FirstYearSubjects :AppCompatActivity() {
             when(view.getId()){
                 R.id.sdf ->
                     if(checked){
-                        val intent = Intent(this,FileListScreen::class.java)
-                        intent.putExtra("subid","sdf")
-                        Toast.makeText(this,"You are viewing SDF",Toast.LENGTH_SHORT).show()
-                        startActivity(intent)
+                   subject="sdf"
                     }
                 R.id.physics ->
                     if(checked){
-                        val intent = Intent(this,FileListScreen::class.java)
-                        intent.putExtra("subid","physics")
-                        Toast.makeText(this,"You are viewing Physics",Toast.LENGTH_SHORT).show()
-                        startActivity(intent)
+                    subject="physics"
                     }
                 R.id.maths ->
                     if(checked){
-                        val intent = Intent(this,FileListScreen::class.java)
-                        intent.putExtra("subid","maths")
-                        Toast.makeText(this,"You are viewing Maths",Toast.LENGTH_SHORT).show()
-                        startActivity(intent)
+                      subject="maths"
                     }
                 R.id.es ->
                     if(checked){
-                        val intent = Intent(this,FileListScreen::class.java)
-                        intent.putExtra("subid","es")
-                        Toast.makeText(this,"You are viewing Electrical Science",Toast.LENGTH_SHORT).show()
-                        startActivity(intent)
+                      subject="es"
                     }
                 R.id.sdflab ->
                     if(checked){
-                        val intent = Intent(this,FileListScreen::class.java)
-                        intent.putExtra("subid","sdflab")
-                        Toast.makeText(this,"You are viewing SDF Lab",Toast.LENGTH_SHORT).show()
-                        startActivity(intent)
+                    subject="sdflab"
                     }
                 R.id.pvlab ->
                     if(checked){
-                        val intent = Intent(this,FileListScreen::class.java)
-                        intent.putExtra("subid","pvlab")
-                        Toast.makeText(this,"You are viewing Physics VLab",Toast.LENGTH_SHORT).show()
-                        startActivity(intent)
+                     subject="pvlab"
                     }
                 R.id.esvlab ->
                     if(checked){
-                        val intent = Intent(this,FileListScreen::class.java)
-                        intent.putExtra("subid","esvlab")
-                        Toast.makeText(this,"You are viewing ES VLab",Toast.LENGTH_SHORT).show()
-                        startActivity(intent)
+                     subject="esvlab"
                     }
                 R.id.edd ->
                     if(checked){
-                        val intent = Intent(this,FileListScreen::class.java)
-                        intent.putExtra("subid","edd")
-                        Toast.makeText(this,"You are viewing EDD",Toast.LENGTH_SHORT).show()
-                        startActivity(intent)
+                       subject="edd"
                     }
                 R.id.workshop ->
                     if(checked){
-                        val intent = Intent(this,FileListScreen::class.java)
-                        intent.putExtra("subid","workshop")
-                        Toast.makeText(this,"You are viewing Workshop",Toast.LENGTH_SHORT).show()
-                        startActivity(intent)
+                     subject="workshop"
                     }
             }
         }
