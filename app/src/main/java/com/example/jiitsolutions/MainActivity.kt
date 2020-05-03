@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         val background = object : Thread(){
             override fun run() {
                 try{
-                    sleep(4000)
+                    sleep(2000)
 
                     val intent= Intent(baseContext,LoginActivity::class.java)
                     startActivity(intent)
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                 val anim = AnimationUtils.loadAnimation(this,R.anim.top)
         val anim2 = AnimationUtils.loadAnimation(this, R.anim.bottom)
         logo1.startAnimation(anim)
-        developer.startAnimation(anim2)
+       // developer.startAnimation(anim2)
 
 
 

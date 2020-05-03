@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#031C32"
+    android:background="#232323"
+android:orientation="vertical"
 
     tools:context=".LoginActivity">
 
@@ -13,77 +14,102 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:layout_width="151dp"
             android:layout_height="142dp"
             android:layout_gravity="center"
             android:contentDescription="@string/logo4"
-            android:src="@drawable/logo3"
-            app:srcCompat="@drawable/logo3" />
+            android:src="@drawable/ic_sc_2"
+            app:srcCompat="@drawable/ic_sc_2" />
 
         <EditText
             android:id="@+id/tv_username"
             android:layout_width="match_parent"
+            android:fontFamily="@font/montserrat"
             android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:autofillHints="Email"
+            android:textSize="14sp"
+            android:background="@drawable/edit_text_background"
             android:hint="@string/email"
-            android:textColorHint="#FFFFFF"
-
             android:inputType="textEmailAddress"
-            android:autofillHints="Email" />
+            android:padding="10dp"
+            android:textColorHint="@android:color/black" />
 
         <EditText
             android:id="@+id/tv_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginBottom="3dp"
+            android:textSize="14sp"
+            android:autofillHints="Password"
+            android:background="@drawable/edit_text_background"
             android:hint="@string/password"
-            android:textColorHint="#FFFFFF"
+            android:fontFamily="@font/montserrat"
             android:inputType="textPassword"
-            android:autofillHints="Password" />
+            android:padding="10dp"
+            android:textColorHint="@android:color/black" />
 
         <Button
             android:id="@+id/btn_log_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@color/colorPrimaryDark"
-            android:padding="16dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/montserrat"
+            android:background="@drawable/custom_button_login"
+            android:padding="10dp"
             android:text="@string/login"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
 
 
+        <Button
+            android:id="@+id/btn_google_signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/custom_button_google_signup"
+            android:drawableLeft="@drawable/ic_google_icon"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/montserrat"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:text="Google Sign In"
+            android:layout_margin="7dp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/btn_google_signin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btn_sign_up"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="142dp"
-        android:layout_marginLeft="11dp"
-        android:layout_marginTop="335dp"
-        android:layout_marginEnd="142dp"
-        android:layout_marginRight="11dp"
-        android:layout_marginBottom="285dp"
-        android:textAlignment="center" />
 
     <Button
         android:id="@+id/btn_sign_up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
-        android:padding="16dp"
+        android:layout_gravity="bottom"
+android:background="@drawable/custom_button_new_account"        android:padding="16dp"
         android:text="@string/dont_have_account"
-        android:textColor="@android:color/white"
         android:textAllCaps="false"
-        android:textSize="18sp"
-        android:layout_alignParentBottom="true"/>
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/montserrat"
+
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

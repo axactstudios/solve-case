@@ -29,7 +29,7 @@ var year:String="FirstYear"
             val intent = Intent(this,FileListScreen::class.java)
             intent.putExtra("subid",subject)
             intent.putExtra("yearid",year)
-            Toast.makeText(this,"You are viewing $subject",Toast.LENGTH_SHORT).show()
+           // Toast.makeText(this,"You are viewing $subject",Toast.LENGTH_SHORT).show()
             startActivity(intent)
         }
     }

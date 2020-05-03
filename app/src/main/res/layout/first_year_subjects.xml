@@ -1,39 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#031C32"
+    android:orientation="vertical"
+    android:weightSum="12"
+    android:background="#232323"
     android:padding="20dp">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="8dp"
-        android:fontFamily="@font/poppins_semibold"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="30dp"
+
+        android:fontFamily="@font/montserrat"
         android:text="Subject"
         android:textColor="#FFFFFF"
         android:textSize="32sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+/>
 
     <RadioGroup
         android:id="@+id/yearGroup"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="24dp">
+        android:layout_height="0dp"
+        android:layout_weight="9"
+android:paddingLeft="30dp">
 
 
         <RadioButton
@@ -42,7 +36,7 @@
             android:layout_height="wrap_content"
             android:checked="true"
             android:fontFamily="@font/montserrat"
-            android:padding="10dp"
+            android:padding="5dp"
             android:text="SDF"
             android:textColor="@android:color/white"
             android:textSize="24sp"
@@ -54,7 +48,7 @@
             android:layout_height="wrap_content"
 
             android:fontFamily="@font/montserrat"
-            android:padding="10dp"
+            android:padding="5dp"
             android:text="Physics"
             android:textColor="@android:color/white"
             android:textSize="24sp"
@@ -66,7 +60,7 @@
             android:layout_height="wrap_content"
 
             android:fontFamily="@font/montserrat"
-            android:padding="10dp"
+            android:padding="5dp"
             android:text="Maths"
             android:textColor="@android:color/white"
             android:textSize="24sp"
@@ -78,7 +72,7 @@
             android:layout_height="wrap_content"
 
             android:fontFamily="@font/montserrat"
-            android:padding="10dp"
+            android:padding="5dp"
             android:text="Electrical Science"
             android:textColor="@android:color/white"
             android:textSize="24sp"
@@ -90,7 +84,7 @@
             android:layout_height="wrap_content"
 
             android:fontFamily="@font/montserrat"
-            android:padding="10dp"
+            android:padding="5dp"
             android:text="SDF Lab"
             android:textColor="@android:color/white"
             android:textSize="24sp"
@@ -102,7 +96,7 @@
             android:layout_height="wrap_content"
 
             android:fontFamily="@font/montserrat"
-            android:padding="10dp"
+            android:padding="5dp"
             android:text="Physics VLab"
             android:textColor="@android:color/white"
             android:textSize="24sp"
@@ -114,7 +108,7 @@
             android:layout_height="wrap_content"
 
             android:fontFamily="@font/montserrat"
-            android:padding="10dp"
+            android:padding="5dp"
             android:text="Electrical Science VLab"
             android:textColor="@android:color/white"
             android:textSize="24sp"
@@ -126,7 +120,7 @@
             android:layout_height="wrap_content"
 
             android:fontFamily="@font/montserrat"
-            android:padding="10dp"
+            android:padding="5dp"
             android:text="EDD"
             android:textColor="@android:color/white"
             android:textSize="24sp"
@@ -138,30 +132,36 @@
             android:layout_height="wrap_content"
 
             android:fontFamily="@font/montserrat"
-            android:padding="10dp"
+            android:padding="5dp"
             android:text="Workshop"
             android:textColor="@android:color/white"
             android:textSize="24sp"
             android:onClick="onRadioButtonClicked"/>
     </RadioGroup>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+
+    android:gravity="right"
+    android:paddingLeft="10dp"
+    android:paddingBottom="10dp"
+
+    >
 
     <Button
         android:id="@+id/choose_subject_1"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/yearGroup"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:background="#C12057"
+
+
+        android:layout_marginRight="10dp"
+        android:background="@drawable/custom_button"
         android:fontFamily="@font/montserrat"
         android:padding="5dp"
         android:text="Search"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/yearGroup"
-        tools:ignore="MissingConstraints" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+</LinearLayout>
+</LinearLayout>

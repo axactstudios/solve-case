@@ -1,34 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="40dp"
+    android:weightSum="10"
     tools:context=".ContactPage"
-    android:background="#031C32">
+    android:orientation="vertical"
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/mapView"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="481dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
+    android:background="#232323">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="2"
+    android:orientation="vertical">
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/poppins_bold"
+
+        android:fontFamily="@font/montserrat"
+android:textStyle="bold"
         android:text="AASC"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,62 +31,92 @@
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@android:color/white"
+
+        android:textSize="20dp"
+        android:fontFamily="@font/montserrat"
         android:text="AviralAkashShubhChitransh"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+/>
+</LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/mapView"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3.5"
+
+    />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:padding="30dp"
+    android:layout_height="0dp"
+    android:layout_weight="4.5"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Contact Us For Suggestions-"
+      android:layout_gravity="center_horizontal"
+        android:text="Enter a suggestion"
+        android:textColor="#d8d6d8"
         android:textSize="26sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        android:textStyle="bold"
+
+        android:fontFamily="@font/montserrat"
+ />
 
     <EditText
         android:id="@+id/usr_msg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
+   android:layout_margin="15dp"
         android:scrollX="40dp"
+        android:textColor="#fff"
         android:hint="Enter Message"
-        android:textColorHint="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        tools:ignore="MissingConstraints" />
+
+        android:fontFamily="@font/montserrat"
+        android:textColorHint="#d8d6d8"
+        android:layout_gravity="center_horizontal"
+        />
 
     <Button
         android:id="@+id/btn_snd_msg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:background="#E91E63"
+
+        android:textSize="14dp"
+android:textStyle="bold"
+android:layout_gravity="center_horizontal"
+        android:background="@drawable/custom_send_message"
+        android:drawableLeft="@drawable/ic_whatsapp_icon"
+        android:fontFamily="@font/montserrat"
+    android:padding="10dp"
+
+        android:drawablePadding="10dp"
         android:text="Send Message"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usr_msg" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="This will take you to whatsapp."
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_snd_msg" />
+        android:textAllCaps="false"></Button>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/contribute"
+    android:background="@drawable/custom_button_1"
+    android:text="Wish To Contribute?"
+    android:textAllCaps="false"
+    android:layout_marginTop="25dp"
+
+    android:layout_gravity="center_horizontal"
+    android:textSize="16sp"
+    android:fontFamily="@font/montserrat"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    />
+
+</LinearLayout>
+</LinearLayout>

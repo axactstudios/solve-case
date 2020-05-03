@@ -4,27 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#031C32"
+    android:background="#232323"
+    android:gravity="center"
     tools:context=".LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:gravity="center|center_vertical">
 
         <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/logo3"
-            android:layout_gravity="center"/>
+            android:src="@drawable/ic_sc_2"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"/>
 
         <EditText
             android:id="@+id/tv_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
-            android:textColorHint="#FFFFFF"
+            android:textColorHint="@android:color/black"
+            android:background="@drawable/edit_text_background"
+            android:padding="10dp"
+android:layout_margin="10dp"
+            android:fontFamily="@font/montserrat"
             android:inputType="textEmailAddress"/>
 
         <EditText
@@ -32,15 +39,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
-            android:textColorHint="#FFFFFF"
+            android:textColorHint="@android:color/black"
+            android:background="@drawable/edit_text_background"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/montserrat"
             android:inputType="textPassword"/>
         <Button
             android:id="@+id/btn_sign_up"
+            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryDark"
+            android:background="@drawable/custom_button_1"
             android:padding="16dp"
             android:text="@string/SignUp"
+            android:fontFamily="@font/montserrat"
             android:textSize="18sp"
             android:layout_marginTop="10dp"
             android:textColor="@android:color/white"

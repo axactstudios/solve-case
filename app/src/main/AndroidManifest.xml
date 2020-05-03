@@ -15,22 +15,39 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".ContactPage"></activity>
-        <activity android:name=".KnowDevelopers" />
-        <activity android:name=".WelcomeScreen" />
-        <activity android:name=".SignupActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ContactPage"
+            android:screenOrientation="portrait"
+            ></activity>
+        <activity android:name=".KnowDevelopers"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".SignupActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".MainActivity"
+         android:screenOrientation="portrait"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity" />
-        <activity android:name=".FirstYearSubjects" />
-        <activity android:name=".SecondYearSubjects" />
-        <activity android:name=".FileListScreen" />
+        <activity android:name=".SecondActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".FirstYearSubjects"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".SecondYearSubjects"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".FileListScreen"
+            android:screenOrientation="portrait"
+            />
 
         <meta-data
             android:name="preloaded_fonts"

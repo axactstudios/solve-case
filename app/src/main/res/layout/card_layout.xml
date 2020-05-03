@@ -6,17 +6,21 @@
     android:layout_marginRight="5dp"
     android:layout_marginTop="5dp"
     app:cardCornerRadius="10dp"
-    app:cardBackgroundColor="@color/maincolor"
+    app:cardBackgroundColor="#232323"
+
+
+
 
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#031C32"
+        android:background="#898989"
         android:baselineAligned="false"
         android:orientation="horizontal"
-        android:padding="5dp">
+       >
 
         <TextView
             android:id="@+id/title"
@@ -27,7 +31,7 @@
             android:fontFamily="@font/montserrat"
             android:padding="10dp"
             android:text="File Name"
-            android:textColor="#ffffff"
+            android:textColor="#d8d6d8"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -36,8 +40,9 @@
             android:layout_width="30dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
+            android:layout_marginRight="10dp"
             android:src="@android:drawable/stat_sys_download_done"
-            android:tint="#FFFFFF" />
+            android:tint="#d8d6d8" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

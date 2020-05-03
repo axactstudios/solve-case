@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@android:color/white"
+    android:background="#232323"
     android:padding="10dp"
     android:weightSum="10"
  >
@@ -13,9 +13,9 @@
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="1"
-    android:text="Downloads Available..."
-    android:textColor="@android:color/black"
-    android:background="@android:color/white"
+    android:text="Downloads Available"
+    android:textColor="@android:color/white"
+    android:background="#232323"
     android:paddingTop="10dp"
     android:paddingLeft="10dp"
     android:textSize="24dp"
@@ -24,6 +24,9 @@
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:padding="10dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="15.0sp"
         android:layout_weight="9"
 />
 </LinearLayout>
