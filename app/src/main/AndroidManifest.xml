@@ -15,9 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".ContactPage"
-            android:screenOrientation="portrait"
-            ></activity>
+        <activity
+            android:name=".ContactPage"
+            android:screenOrientation="portrait" />
         <activity android:name=".KnowDevelopers"
             android:screenOrientation="portrait"
             />
@@ -48,6 +48,7 @@
         <activity android:name=".FileListScreen"
             android:screenOrientation="portrait"
             />
+
 
         <meta-data
             android:name="preloaded_fonts"
