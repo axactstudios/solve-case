@@ -8,6 +8,7 @@ import android.os.AsyncTask
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -36,9 +37,11 @@ class FileListScreen:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.file_list_screen)
+        openDialog()
+
         val bundle: Bundle? = intent.extras
         val yearFolder = bundle!!.getString("yearid")
-        val subjectFolder = bundle!!.getString("subid")
+        val subjectFolder = bundle.getString("subid")
         val filenames = ArrayList<String>()
 
         val db = FirebaseFirestore.getInstance()
@@ -79,15 +82,23 @@ class FileListScreen:AppCompatActivity() {
             storageRef.downloadUrl.addOnSuccessListener { uri ->
                 DownloadFileFromURL().execute(uri.toString(),itemAtPos.toString())
 Toast.makeText(this,"Download started...",Toast.LENGTH_SHORT).show()
+
            //     Toast.makeText(this,storageRef.downloadUrl.toString(),Toast.LENGTH_LONG).show()
             }
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                requestPermissions(arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), 0)
+                requestPermissions(arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
+                    0)
+//                requestPermissions(arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
+//                    1)
             }
 
            // verifyStoragePermissions(FileListScreen)
 
         }
+    }
+    fun openDialog(){
+        val exampleDialog : ExampleDialog = ExampleDialog()
+        exampleDialog.show(supportFragmentManager, "example Dialog")
     }
 
 //    fun verifyStoragePermissions(activity: Activity?) {
@@ -110,7 +121,9 @@ Toast.makeText(this,"Download started...",Toast.LENGTH_SHORT).show()
 
         override fun doInBackground(vararg p0: String?): String? {
             //file download path
-            val downloadFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).toString()
+            val downloadFolder = getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).toString()
+
+//            val downloadFolder = this.getContext().getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).toString()
 
             //image download url
             val url = URL(p0[0])
