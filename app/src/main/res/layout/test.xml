@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#232323">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.1"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.55"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="1"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+<LinearLayout
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+
+        android:text="Developers"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+         app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:weightSum="2"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="85dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_weight="1"
+            android:weightSum="2"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline1"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_aviral"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="7.5dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_weight="1"
+                android:elevation="10dp"
+                android:outlineAmbientShadowColor="@android:color/white"
+                android:outlineSpotShadowColor="@android:color/white"
+                app:cardCornerRadius="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="4.5">
+
+                    <ImageView
+                        android:id="@+id/aviral_pic"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="0dp"
+                        android:layout_weight="3.5">
+
+                    </ImageView>
+
+                    <Button
+                        android:id="@+id/btn_aviral"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="0dp"
+                        android:autoSizeTextType="uniform"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_button_whatsapp"
+                        android:drawableLeft="@drawable/ic_whatsapp_icon"
+                        android:drawablePadding="15dp"
+                        android:fontFamily="@font/montserrat"
+                        android:paddingLeft="15dp"
+                        android:paddingBottom="5dp"
+                        android:text="Aviral Agarwal First Year 7060222315"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textSize="12dp"
+                        android:textStyle="bold"></Button>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_shubh"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="7.5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_weight="1"
+
+                app:cardCornerRadius="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="4.5">
+
+                    <ImageView
+                        android:id="@+id/shubh_pic"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="0dp"
+                        android:layout_weight="3.5">
+
+                    </ImageView>
+
+                    <Button
+                        android:id="@+id/btn_shubh"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+
+                        android:layout_margin="0dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_button_whatsapp"
+                        android:drawableLeft="@drawable/ic_whatsapp_icon"
+                        android:drawablePadding="15dp"
+                        android:fontFamily="@font/montserrat"
+                        android:paddingLeft="15dp"
+                        android:paddingBottom="5dp"
+                        android:text="Shubh Saraswat      First Year 9027553376"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textSize="12dp"
+                        android:textStyle="bold"></Button>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="2"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_chitransh"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="7.5dp"
+            android:layout_marginRight="7.5dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="4.5">
+
+                <ImageView
+                    android:id="@+id/chitransh_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="0dp"
+                    android:layout_weight="3.5">
+
+                </ImageView>
+
+                <Button
+                    android:id="@+id/btn_chitransh"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="0dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/custom_button_whatsapp"
+                    android:drawableLeft="@drawable/ic_whatsapp_icon"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/montserrat"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:text="Chitransh Jain      First Year 8171907780"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textSize="12dp"
+                    android:textStyle="bold"></Button>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_akash"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="7.5dp"
+            android:layout_marginTop="7.5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="4.5">
+
+                <ImageView
+                    android:id="@+id/akash_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="0dp"
+                    android:layout_weight="3.5">
+
+                </ImageView>
+
+                <Button
+                    android:id="@+id/btn_akash"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="0dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_button_whatsapp"
+                    android:drawableLeft="@drawable/ic_whatsapp_icon"
+
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/montserrat"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:text="Akash Rajput      First Year 7895833794"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textSize="12dp"
+                    android:textStyle="bold"></Button>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

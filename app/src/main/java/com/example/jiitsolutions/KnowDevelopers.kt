@@ -11,10 +11,10 @@ class KnowDevelopers : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_know_dev)
+        setContentView(R.layout.test)
 val context=this
         Picasso.with(context).load(R.drawable.aviral_1).fit().centerCrop().into(aviral_pic)
-        Picasso.with(context).load(R.drawable.shubh_3                                                                                                                                                                            ).fit().centerCrop().into(shubh_pic)
+        Picasso.with(context).load(R.drawable.shubh_3).fit().centerCrop().into(shubh_pic)
         Picasso.with(context).load(R.drawable.chiransh_1).fit().centerCrop().into(chitransh_pic)
         Picasso.with(context).load(R.drawable.akash_1).fit().centerCrop().into(akash_pic)
         btn_aviral.setOnClickListener {

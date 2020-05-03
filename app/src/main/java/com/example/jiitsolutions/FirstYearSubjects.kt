@@ -55,10 +55,6 @@ var year:String="FirstYear"
                     if(checked){
                       subject="es"
                     }
-                R.id.sdflab ->
-                    if(checked){
-                    subject="sdflab"
-                    }
                 R.id.pvlab ->
                     if(checked){
                      subject="pvlab"

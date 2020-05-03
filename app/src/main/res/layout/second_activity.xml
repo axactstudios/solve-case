@@ -7,92 +7,121 @@
     android:background="#232323"
     android:orientation="vertical"
     android:weightSum="10"
->
+android:padding="20dp"
+    >
 <TextView
     android:layout_width="match_parent"
     android:layout_height="0dp"
-    android:layout_weight="2"
+    android:layout_weight="1.5"
     android:textStyle="bold"
+    android:gravity="center_vertical"
+    android:paddingLeft="20dp"
     android:text="Hey There!"
+    android:autoSizeMaxTextSize="30dp"
+    android:autoSizeMinTextSize="18dp"
     android:fontFamily="@font/montserrat"
     android:textColor="@android:color/white"
-    android:textSize="28dp"
-    android:padding="50dp"/>
-    <LinearLayout
+    android:textSize="24dp"
+    android:autoSizeTextType="uniform"
+    />
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="7"
+        android:layout_weight="7.5"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/montserrat"
             android:paddingLeft="50dp"
             android:paddingBottom="30dp"
             android:text="Year"
             android:textColor="#FFFFFF"
-            android:textSize="32sp" />
-    <RadioGroup
-        android:id="@+id/yearGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="50dp">
+            android:textSize="34sp"
 
-        <RadioButton
-            android:id="@+id/firstYear"
-            android:layout_width="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.112"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <RadioGroup
+            android:id="@+id/yearGroup"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
-            android:fontFamily="@font/montserrat"
-            android:padding="10dp"
-            android:text="1"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:onClick="onRadioButtonClicked"/>
+            android:layout_marginTop="5dp"
+            android:paddingLeft="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.0">
 
-        <RadioButton
-            android:id="@+id/secondYear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat"
-            android:padding="10dp"
-            android:text="2"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:onClick="onRadioButtonClicked"/>
+            <RadioButton
+                android:id="@+id/firstYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="@font/montserrat"
+                android:onClick="onRadioButtonClicked"
+                android:padding="10dp"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <RadioButton
+                android:id="@+id/secondYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:onClick="onRadioButtonClicked"
+                android:padding="10dp"
+                android:text="2"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
 
 
-    </RadioGroup>
+        </RadioGroup>
 
         <Button
             android:id="@+id/choose_subject"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-android:layout_marginTop="150dp"
-            android:layout_marginLeft="150dp"
             android:background="@drawable/custom_button"
             android:fontFamily="@font/montserrat"
             android:padding="5dp"
             android:text="Choose Subject"
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:autoSizeMaxTextSize="17sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.76"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/yearGroup" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="0dp"
-    android:padding="15dp"
     android:layout_weight="1"
     android:weightSum="2"
+    android:gravity="bottom"
+
     android:orientation="horizontal">
     <Button
         android:id="@+id/knw_btn"
         android:layout_marginRight="7.5dp"
         android:layout_width="0dp"
         android:layout_weight="1"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:autoSizeMinTextSize="16sp"
+
+
 
         android:background="@drawable/custom_button_1"
         android:fontFamily="@font/montserrat"
@@ -106,7 +135,7 @@ android:layout_marginTop="150dp"
     android:id="@+id/btn_contact"
         android:layout_width="0dp"
         android:layout_weight="1"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
 android:layout_marginLeft="7.5dp"
         android:background="@drawable/custom_button_1"
     android:fontFamily="@font/montserrat"

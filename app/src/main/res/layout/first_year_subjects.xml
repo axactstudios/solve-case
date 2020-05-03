@@ -14,12 +14,13 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:padding="30dp"
-
+android:paddingTop="10sp"
+        android:paddingLeft="10sp"
         android:fontFamily="@font/montserrat"
         android:text="Subject"
         android:textColor="#FFFFFF"
-        android:textSize="32sp"
+        android:textSize="26dp"
+
 />
 
     <RadioGroup
@@ -78,17 +79,7 @@ android:paddingLeft="30dp">
             android:textSize="24sp"
             android:onClick="onRadioButtonClicked"/>
 
-        <RadioButton
-            android:id="@+id/sdflab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
 
-            android:fontFamily="@font/montserrat"
-            android:padding="5dp"
-            android:text="SDF Lab"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/pvlab"

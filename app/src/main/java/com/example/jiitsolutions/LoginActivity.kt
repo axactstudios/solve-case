@@ -4,12 +4,13 @@ package com.example.jiitsolutions
 
 import android.app.AlertDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Environment
 import android.util.Log
 import android.util.Patterns
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.ConnectionResult
@@ -20,7 +21,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import dmax.dialog.SpotsDialog
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_login.btn_google_signin
+import java.io.File
 
 class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
 
@@ -75,7 +76,19 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         val btnSignUp: Button? = findViewById<Button>(R.id.btn_sign_up)
         btnSignUp?.let{
             btnSignUp.setOnClickListener {
-            Log.i("MainActivity", "Hello was clicked!")
+//making folder
+                val rootPath = Environment.getExternalStorageDirectory()
+                    .absolutePath + "/SolveCase"
+                val root = File(rootPath)
+                if (!root.exists()) {
+                    root.mkdirs()
+                    Toast.makeText(this,"Folder Created",Toast.LENGTH_LONG).show()
+                }
+                else{
+                    Toast.makeText(this,"Folder hi ni bana",Toast.LENGTH_LONG).show()
+
+                }
+                Log.i("MainActivity", "Hello was clicked!")
             startActivity(Intent(this, SignupActivity::class.java))
             finish()
         }
@@ -83,6 +96,20 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         }
 
         btn_log_in.setOnClickListener {
+            //making folder
+
+            val rootPath = Environment.getExternalStorageDirectory()
+                .absolutePath + "/SolveCase"
+            val root = File(rootPath)
+            if (!root.exists()) {
+                root.mkdirs()
+                Toast.makeText(this,"Folder Created",Toast.LENGTH_LONG).show()
+            }
+            else{
+                Toast.makeText(this,"Folder hi ni bana",Toast.LENGTH_LONG).show()
+
+            }
+
             doLogin()
             Log.i("MainActivity", "Button was clicked!")
         }
@@ -98,6 +125,20 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
             .build()
 
         btn_google_signin.setOnClickListener {
+           //making folder
+
+            val rootPath = Environment.getExternalStorageDirectory()
+                .absolutePath + "/SolveCase"
+            val root = File(rootPath)
+            if (!root.exists()) {
+                root.mkdirs()
+                Toast.makeText(this,"Folder Created",Toast.LENGTH_LONG).show()
+            }
+            else{
+                Toast.makeText(this,"Folder hi ni bana",Toast.LENGTH_LONG).show()
+
+            }
+
             signIn()
         }
     }
@@ -143,8 +184,12 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
     private fun updateUI(currentUser: FirebaseUser?) {
 
         if (currentUser != null) {
+//            val dir = File(
+//                Environment.getExternalStorageDirectory().toString() + "/Download/SolveCase/"
+//            )
+//            dir.mkdirs() // creates needed dirs
 
-                startActivity(Intent(this, SecondActivity::class.java))
+            startActivity(Intent(this, SecondActivity::class.java))
                 finish()
         }
 

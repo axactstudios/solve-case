@@ -1,29 +1,31 @@
 package com.example.jiitsolutions
 
 import android.Manifest
+import android.app.Activity
 import android.content.Context
+import android.content.pm.PackageManager
 import android.os.AsyncTask
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
-import android.util.Log
-import android.widget.ArrayAdapter
-import android.widget.ListView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
 import androidx.multidex.MultiDex
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.file_list_screen.*
 import java.io.BufferedInputStream
 import java.io.FileOutputStream
 import java.net.URL
+//
+//private const val REQUEST_EXTERNAL_STORAGE = 1
+//
+//private val PERMISSIONS_STORAGE = arrayOf(
+//    Manifest.permission.READ_EXTERNAL_STORAGE,
+//    Manifest.permission.WRITE_EXTERNAL_STORAGE
+//)
+
 
 class FileListScreen:AppCompatActivity() {
     override fun attachBaseContext(base: Context?) {
@@ -83,9 +85,26 @@ Toast.makeText(this,"Download started...",Toast.LENGTH_SHORT).show()
                 requestPermissions(arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), 0)
             }
 
+           // verifyStoragePermissions(FileListScreen)
+
         }
     }
 
+//    fun verifyStoragePermissions(activity: Activity?) {
+//        // Check if we have write permission
+//        val permission = ActivityCompat.checkSelfPermission(
+//            activity!!,
+//            Manifest.permission.WRITE_EXTERNAL_STORAGE
+//        )
+//        if (permission != PackageManager.PERMISSION_GRANTED) {
+//            // We don't have permission so prompt the user
+//            ActivityCompat.requestPermissions(
+//                activity,
+//                PERMISSIONS_STORAGE,
+//                REQUEST_EXTERNAL_STORAGE
+//            )
+//        }
+//    }
 
     inner class DownloadFileFromURL : AsyncTask<String?, String?, String?>() {
 
