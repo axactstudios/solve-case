@@ -54,7 +54,7 @@ class ContactPage : AppCompatActivity() {
             }
             else
             {
-                intent.setData(Uri.parse("http://api.whatsapp.com/send?phone=+917060222315" + "&text=" + message))
+                intent.setData(Uri.parse("http://api.whatsapp.com/send?phone=+919027553376" + "&text=" + message))
 
             }
 
