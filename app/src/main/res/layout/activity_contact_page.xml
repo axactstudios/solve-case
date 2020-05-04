@@ -14,13 +14,15 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="0dp"
-    android:layout_weight="2"
+    android:layout_weight="1.5"
+    android:weightSum="3"
     android:orientation="vertical">
     <TextView
         android:id="@+id/textView2"
         android:textColor="@android:color/white"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
 
         android:fontFamily="@font/montserrat"
 android:textStyle="bold"
@@ -33,7 +35,8 @@ android:textStyle="bold"
     <TextView
         android:id="@+id/textView7"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:textColor="@android:color/white"
 
         android:textSize="20dp"
@@ -56,27 +59,41 @@ android:textStyle="bold"
     android:layout_width="match_parent"
     android:padding="30dp"
     android:layout_height="0dp"
-    android:layout_weight="4.5"
+    android:layout_weight="5"
+    android:weightSum="4"
     android:orientation="vertical">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:orientation="vertical">
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+android:gravity="center"
+        android:autoSizeStepGranularity="2sp"
         android:text="Enter a suggestion"
         android:textColor="#d8d6d8"
-        android:textSize="26sp"
+        android:autoSizeTextType="uniform"
+android:autoSizeMaxTextSize="26sp"
+        android:autoSizeMinTextSize="18sp"
         android:textStyle="bold"
 
         android:fontFamily="@font/montserrat"
  />
-
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
     <EditText
         android:id="@+id/usr_msg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-   android:layout_margin="15dp"
         android:scrollX="40dp"
         android:textColor="#fff"
         android:hint="Enter Message"
@@ -85,25 +102,42 @@ android:textStyle="bold"
         android:textColorHint="#d8d6d8"
         android:layout_gravity="center_horizontal"
         />
+    </LinearLayout>
 
-    <Button
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center">
+        <Button
         android:id="@+id/btn_snd_msg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:textSize="14dp"
+        android:autoSizeMaxTextSize="14dp"
+            android:autoSizeMinTextSize="10dp"
+            android:autoSizeStepGranularity="2dp"
+            android:autoSizeTextType="uniform"
 android:textStyle="bold"
 android:layout_gravity="center_horizontal"
         android:background="@drawable/custom_send_message"
         android:drawableLeft="@drawable/ic_whatsapp_icon"
         android:fontFamily="@font/montserrat"
-    android:padding="10dp"
+    android:paddingLeft="10dp"
+            android:paddingRight="10dp"
 
         android:drawablePadding="10dp"
         android:text="Send Message"
 
         android:textAllCaps="false"></Button>
-
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
 <Button
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -111,7 +145,6 @@ android:layout_gravity="center_horizontal"
     android:background="@drawable/custom_button_1"
     android:text="Wish To Contribute?"
     android:textAllCaps="false"
-    android:layout_marginTop="25dp"
 
     android:layout_gravity="center_horizontal"
     android:textSize="16sp"
@@ -119,6 +152,7 @@ android:layout_gravity="center_horizontal"
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
     />
+    </LinearLayout>
 
 </LinearLayout>
 </LinearLayout>
