@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
     android:padding="40dp"
     android:weightSum="10"
     tools:context=".ContactPage"
@@ -39,6 +40,7 @@ android:textStyle="bold"
         android:fontFamily="@font/montserrat"
         android:text="AviralAkashShubhChitransh"
 />
+
 </LinearLayout>
 
     <androidx.fragment.app.FragmentContainerView

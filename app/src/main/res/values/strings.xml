@@ -28,4 +28,5 @@
     <string name="logo4">Logo</string>
     <string name="web_client_id">xxxxxxxx..place your web client id here</string>
     <string name="other_sign_in_options">Other Sign-in Options</string>
+    <string name="admob_app_id">ca-app-pub-3032703257692497~5775345050</string>
 </resources>

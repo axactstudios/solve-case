@@ -4,6 +4,9 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -17,6 +20,7 @@ import kotlin.random.Random.Default.nextInt
 class ContactPage : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
 
         lateinit var googleMap: GoogleMap
         super.onCreate(savedInstanceState)

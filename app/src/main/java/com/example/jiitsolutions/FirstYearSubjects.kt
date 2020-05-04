@@ -6,6 +6,7 @@ import android.os.PersistableBundle
 import android.view.View
 import android.widget.RadioButton
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.StorageReference
@@ -26,13 +27,17 @@ var year:String="FirstYear"
 
 
         choose_subject_1.setOnClickListener {
+
             val intent = Intent(this,FileListScreen::class.java)
             intent.putExtra("subid",subject)
             intent.putExtra("yearid",year)
            // Toast.makeText(this,"You are viewing $subject",Toast.LENGTH_SHORT).show()
             startActivity(intent)
+
         }
+
     }
+
 
     fun onRadioButtonClicked(view: View){
         if(view is RadioButton) {
@@ -94,4 +99,5 @@ var year:String="FirstYear"
             str="Incorrect url"
         }
         return str
+
     }
