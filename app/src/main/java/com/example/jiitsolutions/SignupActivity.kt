@@ -22,6 +22,10 @@ class SignupActivity : AppCompatActivity() {
         btn_sign_up.setOnClickListener {
             signUpUser()
         }
+        back_btn.setOnClickListener {
+            val back_intent = Intent(this,LoginActivity::class.java)
+            startActivity(back_intent)
+        }
 
     }
 

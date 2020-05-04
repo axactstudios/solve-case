@@ -3,7 +3,9 @@ package com.example.jiitsolutions
 import android.Manifest
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.AsyncTask
 import android.os.Build
 import android.os.Bundle
@@ -74,14 +76,16 @@ class FileListScreen:AppCompatActivity() {
         listView.setOnItemClickListener() { adapterView, view, position, id ->
             val itemAtPos = adapterView.getItemAtPosition(position)
             val itemIdAtPos = adapterView.getItemIdAtPosition(position)
-            openDialog()
+//            openDialog()
 
             //  Toast.makeText(this, "$fileurls[$itemIdAtPos]", Toast.LENGTH_SHORT).show()
 
 
             var storageRef = FirebaseStorage.getInstance().reference.child("file/FirstYear/$subjectFolder/").child(itemAtPos.toString())
             storageRef.downloadUrl.addOnSuccessListener { uri ->
-                DownloadFileFromURL().execute(uri.toString(),itemAtPos.toString())
+       //         DownloadFileFromURL().execute(uri.toString(),itemAtPos.toString())
+                val i = Intent(Intent.ACTION_VIEW, Uri.parse(uri.toString()))
+                startActivity(i)
 Toast.makeText(this,"Download started...",Toast.LENGTH_SHORT).show()
 
            //     Toast.makeText(this,storageRef.downloadUrl.toString(),Toast.LENGTH_LONG).show()

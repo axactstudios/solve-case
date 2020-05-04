@@ -1,64 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#232323"
-    android:gravity="center"
+
     tools:context=".LoginActivity">
 
+    <ImageButton
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#232323"
+        android:src="@drawable/ic_back_button"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center|center_vertical"
         android:orientation="vertical"
         android:padding="16dp"
-        android:gravity="center|center_vertical">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/ic_sc_2"
             android:layout_gravity="center"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_sc_2" />
 
         <EditText
             android:id="@+id/tv_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/email"
-            android:textColorHint="@android:color/black"
+            android:layout_margin="10dp"
             android:background="@drawable/edit_text_background"
-            android:padding="10dp"
-android:layout_margin="10dp"
             android:fontFamily="@font/montserrat"
-            android:inputType="textEmailAddress"/>
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColorHint="@android:color/black" />
 
         <EditText
             android:id="@+id/tv_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/password"
-            android:textColorHint="@android:color/black"
-            android:background="@drawable/edit_text_background"
-            android:padding="10dp"
             android:layout_margin="10dp"
+            android:background="@drawable/edit_text_background"
             android:fontFamily="@font/montserrat"
-            android:inputType="textPassword"/>
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColorHint="@android:color/black" />
+
         <Button
             android:id="@+id/btn_sign_up"
-            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/custom_button_1"
+            android:fontFamily="@font/montserrat"
             android:padding="16dp"
             android:text="@string/SignUp"
-            android:fontFamily="@font/montserrat"
-            android:textSize="18sp"
-            android:layout_marginTop="10dp"
-            android:textColor="@android:color/white"
             android:textAllCaps="false"
-            />
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
     </LinearLayout>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

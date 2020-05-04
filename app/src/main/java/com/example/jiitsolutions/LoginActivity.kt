@@ -77,17 +77,17 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         btnSignUp?.let{
             btnSignUp.setOnClickListener {
 //making folder
-                val rootPath = Environment.getExternalStorageDirectory()
-                    .absolutePath + "/SolveCase"
-                val root = File(rootPath)
-                if (!root.exists()) {
-                    root.mkdirs()
-                    Toast.makeText(this,"Folder Created",Toast.LENGTH_LONG).show()
-                }
-                else{
-                    Toast.makeText(this,"Folder hi ni bana",Toast.LENGTH_LONG).show()
-
-                }
+//                val rootPath = Environment.getExternalStorageDirectory()
+//                    .absolutePath + "/SolveCase"
+//                val root = File(rootPath)
+//                if (!root.exists()) {
+//                    root.mkdirs()
+//                    Toast.makeText(this,"Folder Created",Toast.LENGTH_LONG).show()
+//                }
+//                else{
+//                    Toast.makeText(this,"Folder hi ni bana",Toast.LENGTH_LONG).show()
+//
+//                }
                 Log.i("MainActivity", "Hello was clicked!")
             startActivity(Intent(this, SignupActivity::class.java))
             finish()
@@ -98,17 +98,17 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         btn_log_in.setOnClickListener {
             //making folder
 
-            val rootPath = Environment.getExternalStorageDirectory()
-                .absolutePath + "/SolveCase"
-            val root = File(rootPath)
-            if (!root.exists()) {
-                root.mkdirs()
-                Toast.makeText(this,"Folder Created",Toast.LENGTH_LONG).show()
-            }
-            else{
-                Toast.makeText(this,"Folder hi ni bana",Toast.LENGTH_LONG).show()
-
-            }
+//            val rootPath = Environment.getExternalStorageDirectory()
+//                .absolutePath + "/SolveCase"
+//            val root = File(rootPath)
+//            if (!root.exists()) {
+//                root.mkdirs()
+//                Toast.makeText(this,"Folder Created",Toast.LENGTH_LONG).show()
+//            }
+//            else{
+//                Toast.makeText(this,"Folder hi ni bana",Toast.LENGTH_LONG).show()
+//
+//            }
 
             doLogin()
             Log.i("MainActivity", "Button was clicked!")
@@ -127,17 +127,17 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         btn_google_signin.setOnClickListener {
            //making folder
 
-            val rootPath = Environment.getExternalStorageDirectory()
-                .absolutePath + "/SolveCase"
-            val root = File(rootPath)
-            if (!root.exists()) {
-                root.mkdirs()
-                Toast.makeText(this,"Folder Created",Toast.LENGTH_LONG).show()
-            }
-            else{
-                Toast.makeText(this,"Folder hi ni bana",Toast.LENGTH_LONG).show()
-
-            }
+//            val rootPath = Environment.getExternalStorageDirectory()
+//                .absolutePath + "/SolveCase"
+//            val root = File(rootPath)
+//            if (!root.exists()) {
+//                root.mkdirs()
+//                Toast.makeText(this,"Folder Created",Toast.LENGTH_LONG).show()
+//            }
+//            else{
+//                Toast.makeText(this,"Folder hi ni bana",Toast.LENGTH_LONG).show()
+//
+//            }
 
             signIn()
         }

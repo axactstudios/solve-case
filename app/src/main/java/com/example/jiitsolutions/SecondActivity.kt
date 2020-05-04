@@ -6,6 +6,7 @@ import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.RadioButton
 import android.widget.Toast
@@ -25,11 +26,12 @@ class SecondActivity : AppCompatActivity() {
 
         setContentView(R.layout.second_activity)
 //choose_subject.setBackgroundColor(Color.rgb(137,205,171))
+
         context=this
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
         if(checkPermission(context,permissions))
         {
-            Toast.makeText(this,"Permissions are already provided",Toast.LENGTH_LONG).show()
+Log.d("Message","Permissions are already provided" )
         }
         else{
 
