@@ -11,7 +11,7 @@ class KnowDevelopers : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.test)
+        setContentView(R.layout.activity_know_dev)
 val context=this
         Picasso.with(context).load(R.drawable.aviral_1).fit().centerCrop().into(aviral_pic)
         Picasso.with(context).load(R.drawable.shubh_3).fit().centerCrop().into(shubh_pic)

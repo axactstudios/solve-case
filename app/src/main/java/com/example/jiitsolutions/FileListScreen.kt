@@ -37,7 +37,6 @@ class FileListScreen:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.file_list_screen)
-        openDialog()
 
         val bundle: Bundle? = intent.extras
         val yearFolder = bundle!!.getString("yearid")
@@ -75,7 +74,9 @@ class FileListScreen:AppCompatActivity() {
         listView.setOnItemClickListener() { adapterView, view, position, id ->
             val itemAtPos = adapterView.getItemAtPosition(position)
             val itemIdAtPos = adapterView.getItemIdAtPosition(position)
-          //  Toast.makeText(this, "$fileurls[$itemIdAtPos]", Toast.LENGTH_SHORT).show()
+            openDialog()
+
+            //  Toast.makeText(this, "$fileurls[$itemIdAtPos]", Toast.LENGTH_SHORT).show()
 
 
             var storageRef = FirebaseStorage.getInstance().reference.child("file/FirstYear/$subjectFolder/").child(itemAtPos.toString())

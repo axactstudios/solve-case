@@ -10,19 +10,21 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:autoSizeTextType="uniform"
+        android:layout_weight="1.5"
+        android:gravity="center_vertical"
         android:fontFamily="@font/montserrat"
-        android:padding="20dp"
+        android:paddingLeft="20dp"
         android:text="Developers"
         android:textColor="@android:color/white"
-        android:textSize="28dp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMaxTextSize="28dp"
+        android:autoSizeMinTextSize="24dp"
         android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4.5"
+        android:layout_weight="4.25"
         android:weightSum="2"
        >
         <androidx.cardview.widget.CardView
@@ -60,14 +62,13 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:textSize="12dp"
-android:textStyle="bold"
                     android:background="@drawable/custom_button_whatsapp"
                     android:drawableLeft="@drawable/ic_whatsapp_icon"
                     android:fontFamily="@font/montserrat"
                     android:paddingLeft="15dp"
                     android:paddingBottom="5dp"
                     android:drawablePadding="15dp"
-                    android:text="Aviral Agarwal First Year 7060222315"
+                    android:text="Aviral Agarwal&#10;First Year&#10;7060222315"
                     android:textAlignment="textStart"
                     android:textAllCaps="false"></Button>
             </LinearLayout>
@@ -100,12 +101,10 @@ android:textStyle="bold"
                 <Button
                     android:id="@+id/btn_shubh"
                     android:layout_width="match_parent"
-                    android:textStyle="bold"
-
                     android:layout_height="0dp"
                     android:layout_margin="0dp"
                     android:textSize="12dp"
-                    android:layout_marginRight="5dp"
+
                     android:layout_weight="1"
                     android:background="@drawable/custom_button_whatsapp"
                     android:drawableLeft="@drawable/ic_whatsapp_icon"
@@ -113,7 +112,7 @@ android:textStyle="bold"
                     android:paddingLeft="15dp"
                     android:paddingBottom="5dp"
                     android:drawablePadding="15dp"
-                    android:text="Shubh Saraswat      First Year 9027553376"
+                    android:text="Shubh Saraswat&#10;First Year&#10;9027553376"
                     android:textAlignment="textStart"
                     android:textAllCaps="false"></Button>
             </LinearLayout>
@@ -123,7 +122,7 @@ android:textStyle="bold"
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4.5"
+        android:layout_weight="4.25"
         android:weightSum="2">
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
@@ -154,7 +153,6 @@ android:textStyle="bold"
                     android:layout_height="0dp"
                     android:layout_margin="0dp"
                     android:textSize="12dp"
-                    android:textStyle="bold"
 
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
@@ -164,7 +162,7 @@ android:textStyle="bold"
                     android:paddingLeft="15dp"
                     android:paddingBottom="5dp"
                     android:drawablePadding="15dp"
-                    android:text="Chitransh Jain      First Year 8171907780"
+                    android:text="Chitransh Jain&#10;First Year&#10;8171907780"
                     android:textAlignment="textStart"
                     android:textAllCaps="false"></Button>
             </LinearLayout>
@@ -200,7 +198,6 @@ android:textStyle="bold"
                     android:textSize="12dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    android:textStyle="bold"
 
                     android:background="@drawable/custom_button_whatsapp"
                     android:drawableLeft="@drawable/ic_whatsapp_icon"
@@ -208,7 +205,7 @@ android:textStyle="bold"
                     android:paddingLeft="15dp"
                     android:paddingBottom="5dp"
                     android:drawablePadding="15dp"
-                    android:text="Akash Rajput      First Year 7895833794"
+                    android:text="Akash Rajput&#10;First Year&#10;7895833794"
                     android:textAlignment="textStart"
                     android:textAllCaps="false"></Button>
             </LinearLayout>
