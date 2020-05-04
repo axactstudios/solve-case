@@ -5,9 +5,8 @@
     tools:ignore="ExtraText">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -19,49 +18,46 @@
         <activity
             android:name=".ContactPage"
             android:screenOrientation="portrait" />
-        <activity android:name=".KnowDevelopers"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".SignupActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".LoginActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".MainActivity"
-         android:screenOrientation="portrait"
-            >
+        <activity
+            android:name=".KnowDevelopers"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".FirstYearSubjects"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".SecondYearSubjects"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".FileListScreen"
-            android:screenOrientation="portrait"
-            />
-
+        <activity
+            android:name=".SecondActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FirstYearSubjects"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SecondYearSubjects"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FileListScreen"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCQ_HfxeZxS2BN-_WA3KvjyWfuYHbpnU1k"/>
+            android:value="AIzaSyCQ_HfxeZxS2BN-_WA3KvjyWfuYHbpnU1k" />
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3032703257692497~5775345050"/>
+            android:value="ca-app-pub-3032703257692497~5775345050" />
     </application>
-
-
 
 </manifest>

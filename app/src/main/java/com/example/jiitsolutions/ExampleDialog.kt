@@ -1,6 +1,7 @@
 package com.example.jiitsolutions
 
 import android.app.Dialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -20,11 +21,14 @@ class ExampleDialog : AppCompatDialogFragment() {
         builder!!.setPositiveButton("Contact page"){dialogInterface, which ->
             val intent = Intent(context, ContactPage::class.java)
             startActivity(intent)
-
-
         }
+
         builder.setNeutralButton("Cancel"){dialogInterface , which ->
             Toast.makeText(context,"clicked cancel\n operation cancel",Toast.LENGTH_LONG).show()
+        }
+        builder.setNegativeButton("make available offline?") {dialogInterface, which ->
+            val intent = Intent(context, KnowDevelopers::class.java)
+            startActivity(intent)
         }
         return builder.create()
         //aa
