@@ -15,6 +15,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".FundamentalsofComputer"></activity>
+        <activity android:name=".BasicMathsActivity" />
+        <activity android:name=".SdfActivity" />
+        <activity android:name=".PhysicsActivity" />
+        <activity android:name=".ESActivity" />
+        <activity android:name=".YouTubePlayerActivity" />
+        <activity android:name=".MathsActivity" />
+        <activity android:name=".SecondYearActivity" />
+        <activity android:name=".FirstYearActivity" />
+        <activity android:name=".VideoLecturesActivity" />
         <activity
             android:name=".ContactPage"
             android:screenOrientation="portrait" />
