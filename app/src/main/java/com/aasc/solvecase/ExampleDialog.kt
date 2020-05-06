@@ -1,7 +1,6 @@
-package com.example.jiitsolutions
+package com.aasc.solvecase
 
 import android.app.Dialog
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
