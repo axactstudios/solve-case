@@ -51,6 +51,11 @@ Log.d("Message","Permissions are already provided" )
             val intent = Intent(this, ContactPage::class.java)
             startActivity(intent)
         }
+        btn_video.setOnClickListener {
+            val intent = Intent(this,VideoLecturesActivity::class.java)
+            startActivity(intent)
+        }
+
         choose_subject.setOnClickListener {
             if(yearCode=="1") {
                 val intent = Intent(this, FirstYearSubjects::class.java)

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#232323"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvSubjects"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Subjects"
+        android:textSize="40dp"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/montserrat"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="246dp"
+        android:fontFamily="@font/montserrat">
+
+        <RadioButton
+            android:id="@+id/rb_maths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maths"
+            android:onClick="onRadioButtonClicked"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:fontFamily="@font/montserrat"/>
+        <RadioButton
+            android:id="@+id/rb_es"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Electrical Science"
+            android:onClick="onRadioButtonClicked"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:fontFamily="@font/montserrat"/>
+
+        <RadioButton
+            android:id="@+id/rb_physics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Physics"
+            android:onClick="onRadioButtonClicked"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:fontFamily="@font/montserrat"/>
+
+        <RadioButton
+            android:id="@+id/rb_sdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Software Development Fundamentals"
+            android:onClick="onRadioButtonClicked"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:fontFamily="@font/montserrat"/>
+
+        <RadioButton
+            android:id="@+id/rb_basicmaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Basic Maths - Biotech"
+            android:onClick="onRadioButtonClicked"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:fontFamily="@font/montserrat"/>
+
+        <RadioButton
+            android:id="@+id/rb_focp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fundamentals of Computers and Programming - Biotech"
+            android:onClick="onRadioButtonClicked"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:fontFamily="@font/montserrat"/>
+
+    </RadioGroup>
+
+</LinearLayout>
