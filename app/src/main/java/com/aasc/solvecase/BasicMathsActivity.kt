@@ -1,4 +1,4 @@
-package com.example.jiitsolutions
+package com.aasc.solvecase
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

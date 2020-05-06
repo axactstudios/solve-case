@@ -1,9 +1,8 @@
-package com.example.jiitsolutions
+package com.aasc.solvecase
 
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -12,7 +11,6 @@ import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.second_activity.*
-import java.util.jar.Manifest
 
 private val PERMISSION_REQUEST=10
 

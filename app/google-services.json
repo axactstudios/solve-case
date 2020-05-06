@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:402953466200:android:d8f8659258b810fa74352d",
         "android_client_info": {
-          "package_name": "com.example.jiitsolutions"
+          "package_name": "com.aasc.solvecase"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "402953466200-bbr5p22m5jr80ep8h3iidibg6hdourll.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.jiitsolutions",
+            "package_name": "com.aasc.solvecase",
             "certificate_hash": "f039ba87bc2d5fb36b1c8a0a98e030ba8abf5c87"
           }
         },
@@ -26,7 +26,7 @@
           "client_id": "402953466200-5g8r236556qc8u6chrhfnsj0hetklmc2.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.jiitsolutions",
+            "package_name": "com.aasc.solvecase",
             "certificate_hash": "481029a45b4c289d717f5e90f55aaf8e361ebdf4"
           }
         },
@@ -34,7 +34,7 @@
           "client_id": "402953466200-a97p99rg0dj83p0rdmjb247nm95mlm7m.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.jiitsolutions",
+            "package_name": "com.aasc.solvecase",
             "certificate_hash": "c61a3e94fe139e4295a672349ef2e727d73582d7"
           }
         },
@@ -42,7 +42,7 @@
           "client_id": "402953466200-490ne1c0rb9t2p7a1aj30g4cm8uidg7i.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.jiitsolutions",
+            "package_name": "com.aasc.solvecase",
             "certificate_hash": "8835762b750348990b24e0277309328d54dc5a5a"
           }
         },

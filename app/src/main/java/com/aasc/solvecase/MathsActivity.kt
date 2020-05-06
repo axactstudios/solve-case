@@ -1,4 +1,4 @@
-package com.example.jiitsolutions
+package com.aasc.solvecase
 
 import android.content.Intent
 import android.os.Bundle

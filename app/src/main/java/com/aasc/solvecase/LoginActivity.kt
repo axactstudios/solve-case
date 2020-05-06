@@ -1,11 +1,10 @@
 @file:Suppress("DEPRECATION")
 
-package com.example.jiitsolutions
+package com.aasc.solvecase
 
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
-import android.os.Environment
 import android.util.Log
 import android.util.Patterns
 import android.widget.Button
@@ -21,7 +20,6 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import dmax.dialog.SpotsDialog
 import kotlinx.android.synthetic.main.activity_login.*
-import java.io.File
 
 class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
 
