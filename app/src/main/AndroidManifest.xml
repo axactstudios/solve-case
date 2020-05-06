@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.jiitsolutions"
+    package="com.aasc.solvecase"
     tools:ignore="ExtraText">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -16,19 +16,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
-            android:name=".ContactPage"
+            android:name="com.aasc.solvecase.ContactPage"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".KnowDevelopers"
+            android:name="com.aasc.solvecase.KnowDevelopers"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SignupActivity"
+            android:name="com.aasc.solvecase.SignupActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".LoginActivity"
+            android:name="com.aasc.solvecase.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.aasc.solvecase.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,16 +37,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SecondActivity"
+            android:name="com.aasc.solvecase.SecondActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".FirstYearSubjects"
+            android:name="com.aasc.solvecase.FirstYearSubjects"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SecondYearSubjects"
+            android:name="com.aasc.solvecase.SecondYearSubjects"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".FileListScreen"
+            android:name="com.aasc.solvecase.FileListScreen"
             android:screenOrientation="portrait" />
 
         <meta-data
