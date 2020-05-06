@@ -5,11 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#232323">
-
+    android:background="#232323"
+    android:orientation="vertical"
+    android:weightSum="10">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Lectures Available"
+        android:textColor="@android:color/white"
+        android:background="#232323"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:textSize="24dp"
+        android:fontFamily="@font/montserrat" />
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
         android:id="@+id/recyclerView">
 
     </androidx.recyclerview.widget.RecyclerView>

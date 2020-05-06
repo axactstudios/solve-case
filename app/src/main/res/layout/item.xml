@@ -4,14 +4,15 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_margin="4dp"
+    android:background="#232323"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="#3E384A"
-        android:layout_margin="10dp"
+        app:cardBackgroundColor="#898989"
+        android:layout_margin="5dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp">
 
@@ -27,12 +28,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Title"
-                android:textColor="#FFFFFF"
+                android:textColor="#d8d6d8"
                 android:textSize="20dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:textAlignment="center"
+                android:textAlignment="viewStart"
                 android:fontFamily="@font/montserrat"/>
             <TextView
                 android:id="@+id/tvKey"
