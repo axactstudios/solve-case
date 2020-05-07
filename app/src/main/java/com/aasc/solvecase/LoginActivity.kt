@@ -55,7 +55,7 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         firebaseAuth!!.signInWithCredential(credential)
             .addOnSuccessListener {authResult ->
                 val logged_email = authResult.user!!.email
-                val logged_activity = Intent(this@LoginActivity,SecondActivity::class.java)
+                val logged_activity = Intent(this@LoginActivity,OptionsScreen::class.java)
                 startActivity(logged_activity)
             }
             .addOnFailureListener {
@@ -187,7 +187,7 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
 //            )
 //            dir.mkdirs() // creates needed dirs
 
-            startActivity(Intent(this, SecondActivity::class.java))
+            startActivity(Intent(this, OptionsScreen::class.java))
                 finish()
         }
 

@@ -6,31 +6,52 @@
     android:layout_height="match_parent"
     android:background="#232323"
     android:orientation="vertical"
-    android:weightSum="10"
-android:padding="20dp"
+    android:weightSum="8"
     >
 
-<TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@drawable/gradient_background"
+        android:orientation="horizontal"
+        android:padding="30sp"
+        android:weightSum="4">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Solutions"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
+                android:autoSizeTextType="uniform"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="All your tute and assignment&#10;solutions are here"
+                android:fontFamily="@font/montserrat"
+                android:autoSizeTextType="uniform"/>
 
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="1.5"
-    android:textStyle="bold"
-    android:gravity="center_vertical"
-    android:paddingLeft="20dp"
-    android:text="Hey There!"
-    android:autoSizeMaxTextSize="30dp"
-    android:autoSizeMinTextSize="18dp"
-    android:fontFamily="@font/montserrat"
-    android:textColor="@android:color/white"
-    android:textSize="24dp"
-    android:autoSizeTextType="uniform"
-    />
 
+        </LinearLayout>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:src="@drawable/ic_solution"/>
+    </LinearLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="7.5"
+        android:layout_weight="6"
         android:orientation="vertical">
 
         <TextView
@@ -127,60 +148,5 @@ android:padding="20dp"
             app:layout_constraintVertical_bias="0.767" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="1"
-    android:weightSum="3"
-    android:gravity="bottom"
 
-    android:orientation="horizontal">
-    <Button
-        android:id="@+id/knw_btn"
-        android:layout_marginRight="7.5dp"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:autoSizeMinTextSize="16sp"
-
-
-
-        android:background="@drawable/custom_button_1"
-        android:fontFamily="@font/montserrat"
-        android:padding="5dp"
-        android:textAllCaps="false"
-        android:text="Developed By"
-        android:textColor="#fff"
-        android:textSize="16sp"
-      />
-    <Button
-        android:id="@+id/btn_video"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="7.5dp"
-        android:background="@drawable/custom_button_1"
-        android:fontFamily="@font/montserrat"
-        android:textAllCaps="false"
-        android:padding="5dp"
-        android:text="Video Lectures"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        />
-    <Button
-    android:id="@+id/btn_contact"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-android:layout_marginLeft="7.5dp"
-        android:background="@drawable/custom_button_1"
-    android:fontFamily="@font/montserrat"
-        android:textAllCaps="false"
-    android:padding="5dp"
-    android:text="Contact Us"
-        android:textColor="@android:color/white"
-    android:textSize="16sp"
-    />
-
-</LinearLayout>
 </LinearLayout>

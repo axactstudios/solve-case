@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="8"
+    tools:context=".OptionsScreen">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="2"
+    android:background="@drawable/gradient_background"
+    android:orientation="horizontal"
+    android:padding="30sp"
+    android:weightSum="4">
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="3"
+    android:orientation="vertical"
+    android:weightSum="2">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Hey There!"
+        android:fontFamily="@font/montserrat"
+        android:textStyle="bold"
+        android:autoSizeTextType="uniform"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Solve case is here for&#10;all your problems"
+        android:fontFamily="@font/montserrat"
+        android:autoSizeTextType="uniform"/>
+
+
+</LinearLayout>
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/ic_support"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="vertical"
+        android:padding="25dp"
+        android:weightSum="3">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="12.5dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="12.5dp"
+                android:background="@drawable/card_background"
+                android:elevation="10dp"
+                android:weightSum="2"
+                android:orientation="vertical"
+                >
+                <ImageButton
+                    android:id="@+id/download"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.25"
+                    android:src="@drawable/ic_offline_download"
+                    android:background="@drawable/card_background"                    />
+                <Button
+                    android:id="@+id/download_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.75"
+                    android:textStyle="bold"
+                    android:background="@drawable/card_background"
+                    android:text="Download&#10;Solutions"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@android:color/black"
+                    android:gravity="center_horizontal|center_vertical"/>
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="12.5dp"
+                android:background="@drawable/card_background"
+                android:elevation="10dp"
+                android:weightSum="2"
+                android:orientation="vertical"
+                >
+                <ImageButton
+                    android:id="@+id/lectures"
+                    android:background="@drawable/card_background"                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.25"
+                    android:src="@drawable/ic_internet"
+                    />
+                <Button
+                    android:id="@+id/lectures_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.75"
+                    android:textStyle="bold"
+                    android:background="@drawable/card_background"
+                    android:text="Video&#10;Lectures"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@android:color/black"
+                    android:gravity="center_horizontal|center_vertical"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginBottom="12.5dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="12.5dp"
+                android:background="@drawable/card_background"
+                android:elevation="10dp"
+                android:weightSum="2"
+                android:orientation="vertical"
+                >
+                <ImageButton
+                    android:background="@drawable/card_background"
+android:src="@drawable/ic_education"
+                    android:id="@+id/study_material"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.25"
+
+                    />
+                <Button
+
+                    android:background="@drawable/card_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.75"
+                    android:id="@+id/study_material_1"
+                    android:text="Study&#10;Material"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@android:color/black"
+                    android:gravity="center_horizontal|center_vertical"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="12.5dp"
+                android:background="@drawable/card_background"
+                android:elevation="10dp"
+                android:weightSum="2"
+                android:orientation="vertical"
+                >
+
+                <ImageButton
+                    android:background="@drawable/card_background"
+                    android:src="@drawable/ic_love"
+                    android:id="@+id/contributors"                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.25"
+                    />
+                <Button
+                    android:background="@drawable/card_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.75"
+                    android:id="@+id/contributors_1"
+                    android:text="Top&#10;Contributors"                    android:textStyle="bold"
+
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@android:color/black"
+                    android:gravity="center_horizontal|center_vertical"/>
+            </LinearLayout>
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginBottom="12.5dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="12.5dp"
+                android:background="@drawable/card_background"
+                android:elevation="10dp"
+                android:weightSum="2"
+                android:orientation="vertical"
+                >
+                <ImageButton
+android:background="@drawable/card_background"
+                    android:src="@drawable/ic_gear"
+                    android:layout_width="match_parent"
+                    android:id="@+id/developed_by"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.25"
+                    />
+                <Button
+                    android:id="@+id/developed_by_1"
+                    android:background="@drawable/card_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.75"
+                    android:text="Developed&#10;By"
+                    android:textStyle="bold"
+
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@android:color/black"
+                    android:gravity="center_horizontal|center_vertical"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="12.5dp"
+                android:background="@drawable/card_background"
+                android:elevation="10dp"
+                android:weightSum="2"
+                android:orientation="vertical"
+                >
+                <ImageButton
+                    android:id="@+id/contact_us"
+android:background="@drawable/card_background"
+                    android:src="@drawable/ic_communication"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.25"
+                    />
+                <Button
+                    android:id="@+id/contact_us_1"
+                    android:background="@drawable/card_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.75"
+                    android:text="Contact Us"
+                    android:textStyle="bold"
+
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@android:color/black"
+                    android:gravity="center_horizontal|center_vertical"/>
+            </LinearLayout>
+            </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -15,7 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".ViewActivity"></activity>
+        <activity android:name=".OptionsScreen">
+
+        </activity>
+        <activity android:name=".Test"/>
+        <activity android:name=".ViewActivity" />
         <activity android:name=".FundamentalsofComputer" />
         <activity android:name=".BasicMathsActivity" />
         <activity android:name=".SdfActivity" />
@@ -35,8 +39,7 @@
         <activity
             android:name=".SignupActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".WebViewActivity"/>
+        <activity android:name=".WebViewActivity" />
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait" />

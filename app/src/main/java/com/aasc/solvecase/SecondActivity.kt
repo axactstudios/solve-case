@@ -22,7 +22,7 @@ class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-            startActivity(intent)
+
         setContentView(R.layout.second_activity)
         webView.setOnClickListener {
             val intent = Intent(this, WebViewActivity::class.java)
@@ -45,18 +45,7 @@ Log.d("Message","Permissions are already provided" )
             Toast.makeText(this,"Permissions are already provided",Toast.LENGTH_LONG).show()
 
         }
-        knw_btn.setOnClickListener {
-            val intent = Intent(this, KnowDevelopers::class.java)
-            startActivity(intent)
-        }
-        btn_contact.setOnClickListener {
-            val intent = Intent(this, ContactPage::class.java)
-            startActivity(intent)
-        }
-        btn_video.setOnClickListener {
-            val intent = Intent(this,VideoLecturesActivity::class.java)
-            startActivity(intent)
-        }
+
 
         choose_subject.setOnClickListener {
             if(yearCode=="1") {
