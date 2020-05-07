@@ -25,7 +25,8 @@ class SecondActivity : AppCompatActivity() {
             startActivity(intent)
         setContentView(R.layout.second_activity)
         webView.setOnClickListener {
-            val intent = Intent(this, WebViewActivity::class.java)}
+            val intent = Intent(this, WebViewActivity::class.java)
+            startActivity(intent)}
 //choose_subject.setBackgroundColor(Color.rgb(137,205,171))
 
         context=this
