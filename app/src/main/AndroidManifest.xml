@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".FundamentalsofComputer"></activity>
+        <activity android:name=".ViewPdfActivity"></activity>
+        <activity android:name=".FundamentalsofComputer" />
         <activity android:name=".BasicMathsActivity" />
         <activity android:name=".SdfActivity" />
         <activity android:name=".PhysicsActivity" />

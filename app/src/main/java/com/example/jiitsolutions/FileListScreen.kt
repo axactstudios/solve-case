@@ -17,6 +17,7 @@ import androidx.core.app.ActivityCompat
 import androidx.multidex.MultiDex
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
+import kotlinx.android.synthetic.main.card_layout.*
 import kotlinx.android.synthetic.main.file_list_screen.*
 import java.io.BufferedInputStream
 import java.io.FileOutputStream
@@ -71,8 +72,6 @@ class FileListScreen:AppCompatActivity() {
                 Toast.makeText(this, "Tumse na ho pai", Toast.LENGTH_LONG).show()
             }
 
-
-
         listView.setOnItemClickListener() { adapterView, view, position, id ->
             val itemAtPos = adapterView.getItemAtPosition(position)
             val itemIdAtPos = adapterView.getItemIdAtPosition(position)
@@ -96,6 +95,14 @@ Toast.makeText(this,"Download started...",Toast.LENGTH_SHORT).show()
 //                requestPermissions(arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
 //                    1)
             }
+
+            //THIS WILL REDIRECT TO THE PDF ACTIVITY
+            /*btn_viewpdf.setOnClickListener {
+                val intent = Intent(this,ViewPdfActivity::class.java)
+                intent.putExtra("ViewType","internet")
+                //intent.putExtra("url","URL of the selected PDF File")
+                startActivity(intent)
+            }*/
 
            // verifyStoragePermissions(FileListScreen)
 
