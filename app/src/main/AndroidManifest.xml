@@ -15,30 +15,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name="com.aasc.solvecase.FundamentalsofComputer"></activity>
-        <activity android:name="com.aasc.solvecase.BasicMathsActivity" />
-        <activity android:name="com.aasc.solvecase.SdfActivity" />
-        <activity android:name="com.aasc.solvecase.PhysicsActivity" />
-        <activity android:name="com.aasc.solvecase.ESActivity" />
-        <activity android:name="com.aasc.solvecase.YouTubePlayerActivity" />
-        <activity android:name="com.aasc.solvecase.MathsActivity" />
-        <activity android:name="com.aasc.solvecase.SecondYearActivity" />
-        <activity android:name="com.aasc.solvecase.FirstYearActivity" />
-        <activity android:name="com.aasc.solvecase.VideoLecturesActivity" />
+        <activity android:name=".ViewActivity"></activity>
+        <activity android:name=".FundamentalsofComputer" />
+        <activity android:name=".BasicMathsActivity" />
+        <activity android:name=".SdfActivity" />
+        <activity android:name=".PhysicsActivity" />
+        <activity android:name=".ESActivity" />
+        <activity android:name=".YouTubePlayerActivity" />
+        <activity android:name=".MathsActivity" />
+        <activity android:name=".SecondYearActivity" />
+        <activity android:name=".FirstYearActivity" />
+        <activity android:name=".VideoLecturesActivity" />
         <activity
-            android:name="com.aasc.solvecase.ContactPage"
+            android:name=".ContactPage"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.aasc.solvecase.KnowDevelopers"
+            android:name=".KnowDevelopers"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.aasc.solvecase.SignupActivity"
+            android:name=".SignupActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.aasc.solvecase.LoginActivity"
+            android:name=".LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.aasc.solvecase.MainActivity"
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,16 +48,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.aasc.solvecase.SecondActivity"
+            android:name=".SecondActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.aasc.solvecase.FirstYearSubjects"
+            android:name=".FirstYearSubjects"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.aasc.solvecase.SecondYearSubjects"
+            android:name=".SecondYearSubjects"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.aasc.solvecase.FileListScreen"
+            android:name=".FileListScreen"
             android:screenOrientation="portrait" />
 
         <meta-data
