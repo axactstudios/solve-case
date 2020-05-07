@@ -68,4 +68,6 @@ dependencies {
     implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
     implementation 'com.github.kk121:File-loader:1.2'
     implementation 'com.karumi:dexter:5.0.0'
+
+    implementation 'com.github.florent37:diagonallayout:1.0.3'
 }
