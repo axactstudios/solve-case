@@ -10,6 +10,8 @@ import android.view.View
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.aasc.solvecase.subject_screens.FirstYearSubjects
+import com.aasc.solvecase.subject_screens.SecondYearSubjects
 import kotlinx.android.synthetic.main.second_activity.*
 
 private val PERMISSION_REQUEST=10

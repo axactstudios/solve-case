@@ -45,8 +45,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
+            &#10;
             <RadioButton
-                android:id="@+id/prp"
+                android:id="@+id/basicmaths"
                 android:layout_margin="10dp"
                 android:background="@drawable/card_background"
                 android:layout_width="match_parent"
@@ -55,7 +56,7 @@
                 android:checked="true"
                 android:fontFamily="@font/montserrat"
                 android:padding="5dp"
-                android:text="Probability and Random&#10;Processes"
+                android:text="Basic Mathematics"
                 android:textColor="#232323"
                 android:autoSizeTextType="uniform"
                 android:autoSizeMaxTextSize="24sp"
@@ -65,7 +66,7 @@
                 android:onClick="onRadioButtonClicked"/>
 
             <RadioButton
-                android:id="@+id/ds"
+                android:id="@+id/biotech"
 
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -75,30 +76,13 @@
                 android:textColor="#232323"
                 android:fontFamily="@font/montserrat"
                 android:padding="5dp"
-                android:text="Digital Systems"
+                android:text="Biophysical Techniques"
                 android:buttonTint="#232323"
 
                 android:autoSizeTextType="uniform"
                 android:autoSizeMaxTextSize="24sp"
                 android:autoSizeMinTextSize="16sp"            android:onClick="onRadioButtonClicked"/>
             android:autoSizeStepGranularity="2sp"
-
-            <RadioButton
-                android:id="@+id/coa"
-                android:layout_margin="10dp"
-                android:layout_width="match_parent"
-                android:background="@drawable/card_background"
-                android:textColor="#232323"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:buttonTint="#232323"
-
-                android:fontFamily="@font/montserrat"
-                android:padding="5dp"
-                android:text="Computer Organisation&#10;and Architecture"
-                android:autoSizeTextType="uniform"
-                android:autoSizeMaxTextSize="24sp"
-                android:autoSizeMinTextSize="16sp"                android:onClick="onRadioButtonClicked"/>
 
             <RadioButton
                 android:id="@+id/es"
@@ -112,15 +96,13 @@
 
                 android:fontFamily="@font/montserrat"
                 android:padding="5dp"
-                android:text="Environmental Science"
+                android:text="Electrical Science"
                 android:autoSizeTextType="uniform"
                 android:autoSizeMaxTextSize="24sp"
-                android:autoSizeMinTextSize="16sp"            android:onClick="onRadioButtonClicked"/>
-
-
+                android:autoSizeMinTextSize="16sp"                android:onClick="onRadioButtonClicked"/>
 
             <RadioButton
-                android:id="@+id/dslab"
+                android:id="@+id/fcp"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:background="@drawable/card_background"
@@ -131,13 +113,13 @@
 
                 android:fontFamily="@font/montserrat"
                 android:padding="5dp"
-                android:text="Digital Systems Lab"
+                android:text="FCP"
                 android:autoSizeTextType="uniform"
                 android:autoSizeMaxTextSize="24sp"
-                android:autoSizeMinTextSize="16sp"            android:onClick="onRadioButtonClicked"/>
+                android:autoSizeMinTextSize="16sp"                android:onClick="onRadioButtonClicked"/>
 
             <RadioButton
-                android:id="@+id/coalab"
+                android:id="@+id/basicbiolab"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:background="@drawable/card_background"
@@ -148,13 +130,49 @@
 
                 android:fontFamily="@font/montserrat"
                 android:padding="5dp"
-                android:text="Computer Organisation and Architecture Lab"
+                android:text="Basic Bioscience Lab"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMaxTextSize="24sp"
+                android:autoSizeMinTextSize="16sp"            android:onClick="onRadioButtonClicked"/>
+
+
+
+            <RadioButton
+                android:id="@+id/eslab"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/card_background"
+                android:textColor="#232323"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:buttonTint="#232323"
+
+                android:fontFamily="@font/montserrat"
+                android:padding="5dp"
+                android:text="Electrical Science Lab"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMaxTextSize="24sp"
+                android:autoSizeMinTextSize="16sp"            android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton
+                android:id="@+id/cpl"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/card_background"
+                android:textColor="#232323"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:buttonTint="#232323"
+
+                android:fontFamily="@font/montserrat"
+                android:padding="5dp"
+                android:text="Computer Programming Lab"
                 android:autoSizeTextType="uniform"
                 android:autoSizeMaxTextSize="24sp"
                 android:autoSizeMinTextSize="16sp"              android:onClick="onRadioButtonClicked"/>
 
             <RadioButton
-                android:id="@+id/ls"
+                android:id="@+id/edd"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:background="@drawable/card_background"
@@ -165,7 +183,7 @@
 
                 android:fontFamily="@font/montserrat"
                 android:padding="5dp"
-                android:text="Life Skills"
+                android:text="EDD"
                 android:autoSizeTextType="uniform"
                 android:autoSizeMaxTextSize="24sp"
                 android:autoSizeMinTextSize="16sp"            android:onClick="onRadioButtonClicked"/>

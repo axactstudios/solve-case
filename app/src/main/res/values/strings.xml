@@ -29,4 +29,8 @@
     <string name="web_client_id">xxxxxxxx..place your web client id here</string>
     <string name="other_sign_in_options">Other Sign-in Options</string>
     <string name="admob_app_id">ca-app-pub-3032703257692497~5775345050</string>
+    <string name="title_activity_second_year_subjects_new">SecondYearSubjectsNew</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
