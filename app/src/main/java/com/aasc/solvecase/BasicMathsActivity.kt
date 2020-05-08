@@ -3,11 +3,20 @@ package com.aasc.solvecase
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.EditText
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_maths.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 class BasicMathsActivity : AppCompatActivity(), onVideoItemClickListener {
+
+    var video = ArrayList<videoDetailsModel>()
+    val displayList = ArrayList<videoDetailsModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,8 +24,6 @@ class BasicMathsActivity : AppCompatActivity(), onVideoItemClickListener {
 
         var recyclerView : RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayout.VERTICAL,false)
-
-        var video = ArrayList<videoDetailsModel>()
 
         video.add(videoDetailsModel("What is the Cartesian Coordinate System?","mgx0kT5UbKk"))
         video.add(videoDetailsModel("Distance Between Two Points","0IOEPcAHgi4"))
@@ -66,7 +73,9 @@ class BasicMathsActivity : AppCompatActivity(), onVideoItemClickListener {
         video.add(videoDetailsModel("Bisection Method | Numerical Methods","3j0c_FhOt5U"))
         video.add(videoDetailsModel("Newton Raphson Method | Numerical Methods","7eHuQXMCOvA"))
 
-        var adapter = recyclerViewAdapter(video,clickListener = this)
+        displayList.addAll(video)
+
+        var adapter = recyclerViewAdapter(displayList,clickListener = this)
 
         recyclerView.setAdapter(adapter)
     }
@@ -77,5 +86,55 @@ class BasicMathsActivity : AppCompatActivity(), onVideoItemClickListener {
         intent.putExtra("videoname",item.title)
         intent.putExtra("videokey",item.videokey)
         startActivity(intent)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+        menuInflater.inflate(R.menu.menu, menu)
+        val menuItem = menu!!.findItem(R.id.search)
+
+        if (menuItem!=null) {
+            val searchView = menuItem.actionView as androidx.appcompat.widget.SearchView
+
+            val editText = searchView.findViewById<EditText>(androidx.appcompat.R.id.search_src_text)
+            editText.hint = "Search"
+
+            searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {
+
+                override fun onQueryTextSubmit(query: String?): Boolean {
+                    return true
+                }
+
+                override fun onQueryTextChange(newText: String?): Boolean {
+
+                    if (newText!!.isNotEmpty()) {
+                        displayList.clear()
+                        val search = newText.toLowerCase(Locale.getDefault())
+                        video.forEach {
+                            if (it.title.toLowerCase(Locale.getDefault()).contains(search)) {
+                                displayList.add(it)
+                            }
+                        }
+
+                        recyclerView.adapter!!.notifyDataSetChanged()
+
+                    }
+
+                    else {
+                        displayList.clear()
+                        displayList.addAll(video)
+                        recyclerView.adapter!!.notifyDataSetChanged()
+                    }
+
+                    return true
+                }
+            })
+        }
+
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return super.onOptionsItemSelected(item)
     }
 }

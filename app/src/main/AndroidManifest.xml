@@ -20,13 +20,13 @@
         </activity>
         <activity android:name=".Test"/>
         <activity android:name=".ViewActivity" />
-        <activity android:name=".FundamentalsofComputer" />
-        <activity android:name=".BasicMathsActivity" />
-        <activity android:name=".SdfActivity" />
-        <activity android:name=".PhysicsActivity" />
-        <activity android:name=".ESActivity" />
+        <activity android:name=".FundamentalsofComputer" android:theme="@style/AppTheme"/>
+        <activity android:name=".BasicMathsActivity" android:theme="@style/AppTheme"/>
+        <activity android:name=".SdfActivity" android:theme="@style/AppTheme"/>
+        <activity android:name=".PhysicsActivity" android:theme="@style/AppTheme"/>
+        <activity android:name=".ESActivity" android:theme="@style/AppTheme"/>
         <activity android:name=".YouTubePlayerActivity" />
-        <activity android:name=".MathsActivity" />
+        <activity android:name=".MathsActivity" android:theme="@style/AppTheme"/>
         <activity android:name=".SecondYearActivity" />
         <activity android:name=".FirstYearActivity" />
         <activity android:name=".VideoLecturesActivity" />
