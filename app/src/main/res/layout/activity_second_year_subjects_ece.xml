@@ -46,7 +46,7 @@
             android:layout_height="match_parent"
             >
             <RadioButton
-                android:id="@+id/prp"
+                android:id="@+id/dcd"
                 android:layout_margin="10dp"
                 android:background="@drawable/card_background"
                 android:layout_width="match_parent"
@@ -55,7 +55,7 @@
                 android:checked="true"
                 android:fontFamily="@font/montserrat"
                 android:padding="5dp"
-                android:text="Probability and Random&#10;Processes"
+                android:text="Digital Circuit Design"
                 android:textColor="#232323"
                 android:autoSizeTextType="uniform"
                 android:autoSizeMaxTextSize="24sp"
@@ -65,7 +65,7 @@
                 android:onClick="onRadioButtonClicked"/>
 
             <RadioButton
-                android:id="@+id/ds"
+                android:id="@+id/adc"
 
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -75,16 +75,17 @@
                 android:textColor="#232323"
                 android:fontFamily="@font/montserrat"
                 android:padding="5dp"
-                android:text="Digital Systems"
+                android:text="Analog and Digital Communication"
                 android:buttonTint="#232323"
 
                 android:autoSizeTextType="uniform"
                 android:autoSizeMaxTextSize="24sp"
-                android:autoSizeMinTextSize="16sp"            android:onClick="onRadioButtonClicked"/>
+                android:autoSizeMinTextSize="16sp"
+                android:onClick="onRadioButtonClicked"/>
             android:autoSizeStepGranularity="2sp"
 
             <RadioButton
-                android:id="@+id/coa"
+                android:id="@+id/dsp"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:background="@drawable/card_background"
@@ -95,13 +96,14 @@
 
                 android:fontFamily="@font/montserrat"
                 android:padding="5dp"
-                android:text="Computer Organisation&#10;and Architecture"
+                android:text="Digital Signal Processing"
                 android:autoSizeTextType="uniform"
                 android:autoSizeMaxTextSize="24sp"
-                android:autoSizeMinTextSize="16sp"                android:onClick="onRadioButtonClicked"/>
+                android:autoSizeMinTextSize="16sp"
+                android:onClick="onRadioButtonClicked"/>
 
             <RadioButton
-                android:id="@+id/es"
+                android:id="@+id/dcdlab"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:background="@drawable/card_background"
@@ -112,15 +114,16 @@
 
                 android:fontFamily="@font/montserrat"
                 android:padding="5dp"
-                android:text="Environmental Science"
+                android:text="Digital Circuit Design Lab"
                 android:autoSizeTextType="uniform"
                 android:autoSizeMaxTextSize="24sp"
-                android:autoSizeMinTextSize="16sp"            android:onClick="onRadioButtonClicked"/>
+                android:autoSizeMinTextSize="16sp"
+                android:onClick="onRadioButtonClicked"/>
 
 
 
             <RadioButton
-                android:id="@+id/dslab"
+                android:id="@+id/adclab"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:background="@drawable/card_background"
@@ -131,13 +134,14 @@
 
                 android:fontFamily="@font/montserrat"
                 android:padding="5dp"
-                android:text="Digital Systems Lab"
+                android:text="Analog and Digital Communication Lab"
                 android:autoSizeTextType="uniform"
                 android:autoSizeMaxTextSize="24sp"
-                android:autoSizeMinTextSize="16sp"            android:onClick="onRadioButtonClicked"/>
+                android:autoSizeMinTextSize="16sp"
+                android:onClick="onRadioButtonClicked"/>
 
             <RadioButton
-                android:id="@+id/coalab"
+                android:id="@+id/dsplab"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:background="@drawable/card_background"
@@ -148,10 +152,11 @@
 
                 android:fontFamily="@font/montserrat"
                 android:padding="5dp"
-                android:text="Computer Organisation and Architecture Lab"
+                android:text="Digital Signal Processing Lab"
                 android:autoSizeTextType="uniform"
                 android:autoSizeMaxTextSize="24sp"
-                android:autoSizeMinTextSize="16sp"              android:onClick="onRadioButtonClicked"/>
+                android:autoSizeMinTextSize="16sp"
+                android:onClick="onRadioButtonClicked"/>
 
             <RadioButton
                 android:id="@+id/ls"
@@ -168,7 +173,8 @@
                 android:text="Life Skills"
                 android:autoSizeTextType="uniform"
                 android:autoSizeMaxTextSize="24sp"
-                android:autoSizeMinTextSize="16sp"            android:onClick="onRadioButtonClicked"/>
+                android:autoSizeMinTextSize="16sp"
+                android:onClick="onRadioButtonClicked"/>
 
         </RadioGroup>
 

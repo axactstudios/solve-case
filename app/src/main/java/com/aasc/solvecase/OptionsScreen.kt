@@ -14,11 +14,11 @@ class OptionsScreen : AppCompatActivity() {
         setContentView(R.layout.activity_options_screen)
 
         download.setOnClickListener {
-            var intent=Intent(this,Test::class.java)
+            var intent=Intent(this,StreamSelector::class.java)
             startActivity(intent)
         }
         download_1.setOnClickListener {
-            var intent=Intent(this,Test::class.java)
+            var intent=Intent(this,StreamSelector::class.java)
             startActivity(intent)
         }
         lectures.setOnClickListener {

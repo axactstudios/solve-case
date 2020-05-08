@@ -4,40 +4,214 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+    android:background="#232323"
     android:orientation="vertical"
-    android:weightSum="2"
-
-    android:padding="5dp">
+    android:padding="5dp"
+    android:weightSum="4">
 
     <com.github.florent37.diagonallayout.DiagonalLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:elevation="30dp"
-        app:diagonal_angle="20"
+        app:diagonal_angle="10"
         app:diagonal_gravity="right|bottom">
-<ImageButton
-    android:id="@+id/firstYearButton"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:scaleType="centerCrop"
-    android:src="@drawable/first_year_button"/>
 
-    </com.github.florent37.diagonallayout.DiagonalLayout>
-    <com.github.florent37.diagonallayout.DiagonalLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:elevation="10dp"
-        app:diagonal_angle="20"
-        app:diagonal_gravity="left|top">
-        <ImageButton
-            android:id="@+id/secondYearButton"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/second_year_button"/>
+            android:autoSizeMaxTextSize="36sp"
+            android:autoSizeMinTextSize="16sp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/r1"
+            android:fontFamily="@font/montserrat"
+            android:gravity="right"
+            android:padding="40dp"
+            android:text="Which Stream??"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
     </com.github.florent37.diagonallayout.DiagonalLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:padding="40dp"
+        android:weightSum="7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="4"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="26sp"
+                android:autoSizeMinTextSize="20sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/upper_button_back"
+                android:drawableRight="@drawable/ic_computer"
+                android:fontFamily="@font/montserrat"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="CSE/ECE"
+                android:textColor="#232323"
+                android:textStyle="bold"
+                />
+
+            <Button
+                android:id="@+id/firstYearButton"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="22sp"
+                android:autoSizeMinTextSize="16sp"
+                android:autoSizeStepGranularity="2sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/upper_button_back"
+                android:drawableRight="@drawable/ic_arrow_forward_black_24dp"
+                android:elevation="0dp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="First Year"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                />
+
+            <Button
+                android:id="@+id/secondYearButton_cse"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="22sp"
+                android:autoSizeMinTextSize="16sp"
+                android:autoSizeStepGranularity="2sp"
+                android:autoSizeTextType="uniform"
+                android:background="@android:color/white"
+                android:drawableRight="@drawable/ic_arrow_forward_black_24dp"
+                android:elevation="0dp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Second Year(CSE)"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                />
+
+            <Button
+                android:id="@+id/secondYearButton_ece"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="22sp"
+                android:autoSizeMinTextSize="16sp"
+                android:autoSizeStepGranularity="2sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/bottom_button_back"
+                android:drawableRight="@drawable/ic_arrow_forward_black_24dp"
+                android:elevation="0dp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Second Year(ECE)"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="3"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="26sp"
+                android:autoSizeMinTextSize="20sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/card_background"
+                android:drawableRight="@drawable/ic_biotech"
+                android:fontFamily="@font/montserrat"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+
+                android:paddingRight="20dp"
+                android:text="Biotech"
+                android:textColor="#232323"
+
+                android:textStyle="bold"
+
+                />
+
+            <Button
+                android:id="@+id/firstYearBiotech"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="22sp"
+                android:autoSizeMinTextSize="16sp"
+                android:autoSizeStepGranularity="2sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/upper_button_back"
+                android:drawableRight="@drawable/ic_arrow_forward_black_24dp"
+                android:fontFamily="@font/montserrat"
+
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="First Year"
+                android:textAllCaps="false"
+
+                android:textColor="@android:color/black"
+
+                />
+
+            <Button
+                android:id="@+id/secondYearButton_biotech"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="22sp"
+                android:autoSizeMinTextSize="16sp"
+                android:autoSizeStepGranularity="2sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/bottom_button_back"
+                android:drawableRight="@drawable/ic_arrow_forward_black_24dp"
+                android:fontFamily="@font/montserrat"
+
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Second Year"
+                android:textAllCaps="false"
+
+                android:textColor="@android:color/black"
+
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 </LinearLayout>

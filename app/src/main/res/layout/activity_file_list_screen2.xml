@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-    <LinearLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,7 +9,7 @@
     android:orientation="vertical"
     android:background="#232323"
     android:weightSum="10"
- >
+    >
 
 
 
@@ -63,5 +63,5 @@
         android:divider="@android:color/transparent"
         android:dividerHeight="15.0sp"
         android:layout_weight="8"
-/>
+        />
 </LinearLayout>

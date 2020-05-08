@@ -1,10 +1,12 @@
-package com.aasc.solvecase
+package com.aasc.solvecase.subject_screens
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
+import com.aasc.solvecase.FileListScreen
+import com.aasc.solvecase.R
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.ktx.storage
@@ -25,7 +27,7 @@ var year:String="FirstYear"
 
         choose_subject_1.setOnClickListener {
 
-            val intent = Intent(this,FileListScreen::class.java)
+            val intent = Intent(this, FileListScreen::class.java)
             intent.putExtra("subid",subject)
             intent.putExtra("yearid",year)
            // Toast.makeText(this,"You are viewing $subject",Toast.LENGTH_SHORT).show()

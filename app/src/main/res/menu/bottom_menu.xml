@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--    app:cnb_unselectedcolor="#e6b8e5">-->
+<!--    <item-->
+<!--        android:title="Home"-->
+<!--        android:id="@+id/home"-->
+<!--        android:icon="@drawable/ic_biotech"-->
+<!--        android:iconTint="#c9379d"/>-->
+<!--    #1194aa-->
+
+</menu>

@@ -15,8 +15,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".PhoneActivity"></activity>
-        <activity android:name=".OptionsScreen"></activity>
+        <activity android:name=".subject_screens.SecondYearSubjectsBiotech"></activity>
+        <activity android:name=".FileListScreen2" />
+        <activity android:name=".subject_screens.SecondYearSubjectsECE" />
+        <activity android:name=".subject_screens.FirstYearBiotechSubjects" />
+        <activity android:name=".OptionsScreen" />
+        <activity android:name=".StreamSelector" />
+        <activity android:name=".PhoneActivity" />
+        <activity android:name=".OptionsScreen" />
         <activity android:name=".Test" />
         <activity android:name=".ViewActivity" />
         <activity
@@ -67,10 +73,10 @@
             android:name=".SecondActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".FirstYearSubjects"
+            android:name=".subject_screens.FirstYearSubjects"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SecondYearSubjects"
+            android:name=".subject_screens.SecondYearSubjects"
             android:screenOrientation="portrait" />
         <activity
             android:name=".FileListScreen"
