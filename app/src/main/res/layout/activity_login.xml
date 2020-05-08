@@ -73,6 +73,25 @@ android:orientation="vertical"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
 
+        <Button
+            android:id="@+id/btn_phonesignin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/custom_button_google_signup"
+            android:drawableLeft="@drawable/ic_phone"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/montserrat"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:text="Phone Sign In"
+            android:layout_margin="7dp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_google_signin"
@@ -96,20 +115,7 @@ android:orientation="vertical"
     </LinearLayout>
 
 
-    <Button
-        android:id="@+id/btn_sign_up"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-android:background="@drawable/custom_button_new_account"        android:padding="16dp"
-        android:text="@string/dont_have_account"
-        android:textAllCaps="false"
-        android:textColor="@android:color/black"
-        android:fontFamily="@font/montserrat"
 
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

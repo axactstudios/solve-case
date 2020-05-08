@@ -70,4 +70,7 @@ dependencies {
     implementation 'com.karumi:dexter:5.0.0'
 
     implementation 'com.github.florent37:diagonallayout:1.0.3'
+
+
+    implementation 'com.google.firebase:firebase-auth:19.3.1'
 }
