@@ -23,6 +23,8 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
 
+    lateinit var mAuth: FirebaseAuth
+
     companion object {
         private val PERMISSION_CODE = 2304;
     }
@@ -70,6 +72,11 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         setContentView(R.layout.activity_login)
 
         auth = FirebaseAuth.getInstance()
+
+        btn_phonesignin.setOnClickListener {
+            val intent = Intent (this,PhoneActivity::class.java)
+            startActivity(intent)
+        }
 
         val btnSignUp: Button? = findViewById<Button>(R.id.btn_sign_up)
         btnSignUp?.let{

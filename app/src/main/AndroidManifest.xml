@@ -15,18 +15,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".OptionsScreen">
-
-        </activity>
-        <activity android:name=".Test"/>
+        <activity android:name=".PhoneActivity"></activity>
+        <activity android:name=".OptionsScreen"></activity>
+        <activity android:name=".Test" />
         <activity android:name=".ViewActivity" />
-        <activity android:name=".FundamentalsofComputer" android:theme="@style/AppTheme"/>
-        <activity android:name=".BasicMathsActivity" android:theme="@style/AppTheme"/>
-        <activity android:name=".SdfActivity" android:theme="@style/AppTheme"/>
-        <activity android:name=".PhysicsActivity" android:theme="@style/AppTheme"/>
-        <activity android:name=".ESActivity" android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".FundamentalsofComputer"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".BasicMathsActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SdfActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".PhysicsActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ESActivity"
+            android:theme="@style/AppTheme" />
         <activity android:name=".YouTubePlayerActivity" />
-        <activity android:name=".MathsActivity" android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".MathsActivity"
+            android:theme="@style/AppTheme" />
         <activity android:name=".SecondYearActivity" />
         <activity android:name=".FirstYearActivity" />
         <activity android:name=".VideoLecturesActivity" />
