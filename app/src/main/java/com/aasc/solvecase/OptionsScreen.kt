@@ -14,19 +14,19 @@ class OptionsScreen : AppCompatActivity() {
         setContentView(R.layout.activity_options_screen)
 
         download.setOnClickListener {
-            var intent=Intent(this,StreamSelector::class.java)
+            var intent = Intent(this, StreamSelector::class.java)
             startActivity(intent)
         }
         download_1.setOnClickListener {
-            var intent=Intent(this,StreamSelector::class.java)
+            var intent = Intent(this, StreamSelector::class.java)
             startActivity(intent)
         }
         lectures.setOnClickListener {
-            val intent = Intent(this,VideoLecturesActivity::class.java)
+            val intent = Intent(this, VideoLecturesActivity::class.java)
             startActivity(intent)
         }
         lectures_1.setOnClickListener {
-            val intent = Intent(this,VideoLecturesActivity::class.java)
+            val intent = Intent(this, VideoLecturesActivity::class.java)
             startActivity(intent)
         }
         developed_by.setOnClickListener {
@@ -45,5 +45,10 @@ class OptionsScreen : AppCompatActivity() {
             val intent = Intent(this, ContactPage::class.java)
             startActivity(intent)
         }
+        study_material.setOnClickListener {
+        }
+
+
     }
+
 }
