@@ -11,10 +11,12 @@
         android:id="@+id/cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="#898989"
-        android:layout_margin="5dp"
+        app:cardBackgroundColor="@android:color/white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
         app:cardCornerRadius="10dp"
-        app:cardElevation="10dp">
+       >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,14 +29,13 @@
                 android:id="@+id/tvTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Title"
-                android:textColor="#d8d6d8"
-                android:textSize="20dp"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:textAlignment="viewStart"
-                android:fontFamily="@font/montserrat"/>
+                android:layout_margin="5dp"
+                android:fontFamily="@font/montserrat"
+                android:padding="5dp"
+                android:text="File Name"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
             <TextView
                 android:id="@+id/tvKey"
                 android:layout_width="wrap_content"

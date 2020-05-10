@@ -6,32 +6,42 @@ import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_video_lectures.*
 
 class VideoLecturesActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_video_lectures)
-    }
 
-    fun onRadioButtonClicked (view: View) {
-        if (view is RadioButton) {
-            val checked = view.isChecked
 
-            when (view.getId()) {
-                R.id.rb_fy ->
-                    if (checked) {
-                        val intent = Intent(this, FirstYearActivity::class.java)
-                        Toast.makeText(this, "You selected First Year", Toast.LENGTH_SHORT).show()
-                        startActivity(intent)
-                    }
-                R.id.rb_sy ->
-                    if (checked) {
-                        val intent = Intent(this, SecondYearActivity::class.java)
-                        Toast.makeText(this, "You selected Second Year", Toast.LENGTH_SHORT).show()
-                        startActivity(intent)
-                    }
+            firstYearVideos.setOnClickListener {
+                val intent = Intent(this, FirstYearActivity::class.java)
+                startActivity(intent)
             }
+
+            firstYearVideos2.setOnClickListener {
+                val intent = Intent(this, FirstYearActivity::class.java)
+                startActivity(intent)
+            }
+            firstYearVideos3.setOnClickListener {
+                val intent = Intent(this, FirstYearActivity::class.java)
+                startActivity(intent)
+            }
+            secondYearVideos.setOnClickListener {
+                val intent = Intent(this, SecondYearActivity::class.java)
+                startActivity(intent)
+            }
+            secondYearVideos2.setOnClickListener {
+                val intent = Intent(this, SecondYearActivity::class.java)
+                startActivity(intent)
+            }
+            secondYearVideos3.setOnClickListener {
+                 val intent = Intent(this, SecondYearActivity::class.java)
+                 startActivity(intent)
+             }
+
+
         }
-    }
+
 }
