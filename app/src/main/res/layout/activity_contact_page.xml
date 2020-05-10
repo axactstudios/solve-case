@@ -5,63 +5,83 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
-    android:padding="40dp"
     android:weightSum="10"
     tools:context=".ContactPage"
     android:orientation="vertical"
 
     android:background="#232323">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="1.5"
-    android:weightSum="3"
-    android:orientation="vertical">
-    <TextView
-        android:id="@+id/textView2"
-        android:textColor="@android:color/white"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
+        android:background="@drawable/gradient_background_3"
+        android:orientation="horizontal"
+        android:padding="30sp"
+        android:weightSum="4">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="AASC"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
+                android:autoSizeTextType="uniform"
+                android:autoSizeStepGranularity="2sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                android:text="AviralAkashShubhChitransh&#10;always here for you"
+                android:fontFamily="@font/montserrat"
+                android:autoSizeTextType="uniform"/>
 
-        android:fontFamily="@font/montserrat"
-android:textStyle="bold"
-        android:text="AASC"
-        android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mapView" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:textColor="@android:color/white"
+        </LinearLayout>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:src="@drawable/ic_rock"/>
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="3"
+    android:paddingLeft="30dp"
+    android:paddingTop="30dp"
+    android:paddingRight="30dp"
 
-        android:textSize="20dp"
-        android:fontFamily="@font/montserrat"
-        android:text="AviralAkashShubhChitransh"
-/>
-
-</LinearLayout>
-
+    android:orientation="vertical">
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/mapView"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3.5"
+        android:layout_height="match_parent"
 
     />
-
+</LinearLayout>
 <LinearLayout
     android:layout_width="match_parent"
-    android:padding="30dp"
+    android:padding="50dp"
     android:layout_height="0dp"
     android:layout_weight="5"
-    android:weightSum="4"
     android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="3"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/card_background">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="0dp"
@@ -73,12 +93,13 @@ android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 android:gravity="center"
-        android:autoSizeStepGranularity="2sp"
         android:text="Enter a suggestion"
-        android:textColor="#d8d6d8"
+        android:textColor="#232323"
         android:autoSizeTextType="uniform"
-android:autoSizeMaxTextSize="26sp"
+android:autoSizeMaxTextSize="28sp"
         android:autoSizeMinTextSize="18sp"
+        android:autoSizeStepGranularity="2sp"
+
         android:textStyle="bold"
 
         android:fontFamily="@font/montserrat"
@@ -95,12 +116,16 @@ android:autoSizeMaxTextSize="26sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollX="40dp"
-        android:textColor="#fff"
-        android:hint="Enter Message"
-
+        android:textColor="#232323"
+        android:hint="Your suggestion goes here..."
+android:gravity="center_horizontal|center_vertical"
         android:fontFamily="@font/montserrat"
-        android:textColorHint="#d8d6d8"
+        android:textColorHint="#3C3C3C"
         android:layout_gravity="center_horizontal"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMaxTextSize="24sp"
+        android:autoSizeMinTextSize="16sp"
+        android:autoSizeStepGranularity="2sp"
         />
     </LinearLayout>
 
@@ -124,34 +149,34 @@ android:layout_gravity="center_horizontal"
         android:background="@drawable/custom_send_message"
         android:drawableLeft="@drawable/ic_whatsapp_icon"
         android:fontFamily="@font/montserrat"
-    android:paddingLeft="10dp"
-            android:paddingRight="10dp"
+    android:padding="10dp"
 
         android:drawablePadding="10dp"
         android:text="Send Message"
 
         android:textAllCaps="false"></Button>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:layout_weight="1"
-        android:orientation="vertical">
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/contribute"
-    android:background="@drawable/custom_button_1"
-    android:text="Wish To Contribute?"
-    android:textAllCaps="false"
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_weight="1"-->
+<!--        android:orientation="vertical">-->
+<!--<Button-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:id="@+id/contribute"-->
+<!--    android:background="@drawable/custom_button_1"-->
+<!--    android:text="Wish To Contribute?"-->
+<!--    android:textAllCaps="false"-->
 
-    android:layout_gravity="center_horizontal"
-    android:textSize="16sp"
-    android:fontFamily="@font/montserrat"
-    android:paddingLeft="15dp"
-    android:paddingRight="15dp"
-    />
+<!--    android:layout_gravity="center_horizontal"-->
+<!--    android:textSize="16sp"-->
+<!--    android:fontFamily="@font/montserrat"-->
+<!--    android:paddingLeft="15dp"-->
+<!--    android:paddingRight="15dp"-->
+<!--    />-->
+<!--    </LinearLayout>-->
     </LinearLayout>
 
 </LinearLayout>

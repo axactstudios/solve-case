@@ -21,10 +21,10 @@ class ContactPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact_page)
 
-        contribute.setOnClickListener {
-            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://forms.gle/jmZDrJHFky7LRqK99"))
-            startActivity(i)
-        }
+//        contribute.setOnClickListener {
+//            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://forms.gle/jmZDrJHFky7LRqK99"))
+//            startActivity(i)
+//        }
         val mapFragment : SupportMapFragment = supportFragmentManager.findFragmentById(R.id.mapView) as SupportMapFragment
         mapFragment.getMapAsync(OnMapReadyCallback{
             googleMap = it
