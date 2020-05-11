@@ -53,10 +53,6 @@ class OptionsScreen : AppCompatActivity() {
             val intent = Intent(this, ContactPage::class.java)
             startActivity(intent)
         }
-        study_material.setOnClickListener {
-        }
-
-
     }
 
 }
