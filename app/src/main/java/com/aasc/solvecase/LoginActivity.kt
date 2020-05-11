@@ -1,4 +1,3 @@
-@file:Suppress("DEPRECATION")
 
 package com.aasc.solvecase
 
@@ -73,10 +72,7 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
 
         auth = FirebaseAuth.getInstance()
 
-        btn_phonesignin.setOnClickListener {
-            val intent = Intent (this,PhoneActivity::class.java)
-            startActivity(intent)
-        }
+
 
         val btnSignUp: Button? = findViewById<Button>(R.id.btn_sign_up)
         btnSignUp?.let{
@@ -189,22 +185,20 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
     private fun updateUI(currentUser: FirebaseUser?) {
 
         if (currentUser != null) {
-//            val dir = File(
-//                Environment.getExternalStorageDirectory().toString() + "/Download/SolveCase/"
-//            )
-//            dir.mkdirs() // creates needed dirs
-
-            startActivity(Intent(this, OptionsScreen::class.java))
+            if(currentUser.isEmailVerified) {
+                startActivity(Intent(this, OptionsScreen::class.java))
                 finish()
-        }
-
-
-         else {
+            }else{
+                Toast.makeText(
+                    baseContext, "Please verify your email address.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        } else {
             Toast.makeText(
-                baseContext, "Login failed. Please log in again.",
+                baseContext, "Login failed.",
                 Toast.LENGTH_SHORT
             ).show()
-            Log.i("MainActivity", "Button was clicked!")
         }
     }
 
