@@ -21,6 +21,14 @@ class OptionsScreen : AppCompatActivity() {
             var intent=Intent(this,StreamSelector::class.java)
             startActivity(intent)
         }
+        study_material.setOnClickListener {
+            val intent = Intent(this,YearActivity::class.java)
+            startActivity(intent)
+        }
+        study_material_1.setOnClickListener {
+            val intent = Intent(this,YearActivity::class.java)
+            startActivity(intent)
+        }
         lectures.setOnClickListener {
             val intent = Intent(this,VideoLecturesActivity::class.java)
             startActivity(intent)

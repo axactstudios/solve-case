@@ -20,6 +20,10 @@ class ViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view)
 
+        val bundle : Bundle?= intent.extras
+        val fileurl = bundle!!.getString("fileurl")
+        Toast.makeText(this,fileurl,Toast.LENGTH_SHORT).show()
+
         if(intent!=null)
         {
             val viewType : String = intent.getStringExtra("ViewType")
@@ -30,7 +34,7 @@ class ViewActivity : AppCompatActivity() {
                     progress_bar.visibility = View.VISIBLE
 
                     FileLoader.with(this)
-                        .load("https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf",false)
+                        .load(fileurl,false)
                         .fromDirectory("PDFFile", FileLoader.DIR_INTERNAL)
                         .asFile(object : FileRequestListener<File> {
                             override fun onLoad(p0: FileLoadRequest?, p1: FileResponse<File>?) {

@@ -15,7 +15,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".subject_screens.SecondYearSubjectsBiotech"></activity>
+        <activity android:name=".study_material.DigitalCircuitDesign" android:theme="@style/AppTheme" ></activity>
+        <activity android:name=".study_material.AnalogAndDigitalCommunication" android:theme="@style/AppTheme" />
+        <activity android:name=".study_material.DigitalSystem" android:theme="@style/AppTheme" />
+        <activity android:name=".study_material.DigitalSignalProcessing" android:theme="@style/AppTheme" />
+        <activity android:name=".study_material.OperatingSystem" android:theme="@style/AppTheme" />
+        <activity android:name=".study_material.AlgorithmsAndProblemSolving" android:theme="@style/AppTheme" />
+        <activity android:name=".study_material.Probability" android:theme="@style/AppTheme" />
+        <activity
+            android:name=".study_material.EsActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".study_material.PhysicsActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".study_material.MathsActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".study_material.SDFActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".study_material.SecondYearStudyMaterial" />
+        <activity android:name=".study_material.FirstYearStudyMaterial" />
+        <activity android:name=".YearActivity" />
+        <activity android:name=".subject_screens.YearActivity" />
+        <activity android:name=".subject_screens.SecondYearSubjectsBiotech" />
         <activity android:name=".FileListScreen2" />
         <activity android:name=".subject_screens.SecondYearSubjectsECE" />
         <activity android:name=".subject_screens.FirstYearBiotechSubjects" />

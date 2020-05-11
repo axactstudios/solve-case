@@ -15,8 +15,9 @@ class WebViewActivity : AppCompatActivity() {
         webView.webViewClient = WebViewClient()
         webView.settings.setSupportZoom(true)
         webView.settings.javaScriptEnabled = true
-        val url = FileUtils.getPdfUrl()
-        webView.loadUrl("https://docs.google.com/gview?embedded=true&url=$url")
+        val bundle : Bundle? = intent.extras
+        var fileurl = bundle!!.getString("fileurl")
+        webView.loadUrl(fileurl)
     }
 }
 
