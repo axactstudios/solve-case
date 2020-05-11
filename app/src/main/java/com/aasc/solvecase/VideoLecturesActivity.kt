@@ -29,17 +29,22 @@ class VideoLecturesActivity : AppCompatActivity() {
                 startActivity(intent)
             }
             secondYearVideos.setOnClickListener {
-                val intent = Intent(this, SecondYearActivity::class.java)
-                startActivity(intent)
+//                val intent = Intent(this, SecondYearActivity::class.java)
+//                startActivity(intent)
+                Toast.makeText(this,"Playlist will be released soon",Toast.LENGTH_SHORT).show()
             }
             secondYearVideos2.setOnClickListener {
-                val intent = Intent(this, SecondYearActivity::class.java)
-                startActivity(intent)
+//                val intent = Intent(this, SecondYearActivity::class.java)
+//                startActivity(intent)
+                Toast.makeText(this,"Playlist will be released soon",Toast.LENGTH_SHORT).show()
+
             }
             secondYearVideos3.setOnClickListener {
-                 val intent = Intent(this, SecondYearActivity::class.java)
-                 startActivity(intent)
-             }
+//                 val intent = Intent(this, SecondYearActivity::class.java)
+//                 startActivity(intent)
+                Toast.makeText(this,"Playlist will be released soon",Toast.LENGTH_SHORT).show()
+
+            }
 
 
         }

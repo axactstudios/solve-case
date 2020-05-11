@@ -1,58 +1,277 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="4"
     tools:context=".VideoLecturesActivity">
+    <com.github.florent37.diagonallayout.DiagonalLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:elevation="30dp"
+        app:diagonal_angle="10"
+        app:diagonal_gravity="right|bottom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autoSizeMaxTextSize="36sp"
+            android:autoSizeMinTextSize="16sp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/r1"
+            android:fontFamily="@font/montserrat"
+            android:gravity="right"
+            android:padding="40dp"
+            android:text="Which Year??"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </com.github.florent37.diagonallayout.DiagonalLayout>
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="52dp"-->
+    <!--        android:layout_marginTop="81dp"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tvYears"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentLeft="true"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:text="Select Year"-->
+    <!--        android:textSize="30dp"-->
+    <!--        android:textColor="#FFFFFF"-->
+    <!--        android:fontFamily="@font/montserrat"/>-->
+
+    <!--        <RadioGroup-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            tools:layout_editor_absoluteX="202dp"-->
+    <!--            tools:layout_editor_absoluteY="246dp">-->
+
+    <!--        <RadioButton-->
+    <!--            android:id="@+id/rb_fy"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="First Year"-->
+    <!--            android:onClick="onRadioButtonClicked"-->
+    <!--            android:textColor="#FFFFFF"-->
+    <!--            android:textSize="20dp"-->
+    <!--            android:padding="5dp"-->
+    <!--            android:layout_marginTop="40dp"-->
+    <!--            android:fontFamily="@font/montserrat"/>-->
+    <!--        <RadioButton-->
+    <!--            android:id="@+id/rb_sy"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Second Year"-->
+    <!--            android:onClick="onRadioButtonClicked"-->
+    <!--            android:textColor="#FFFFFF"-->
+    <!--            android:textSize="20dp"-->
+    <!--            android:padding="5dp"-->
+    <!--            android:layout_marginTop="15dp"-->
+    <!--            android:fontFamily="@font/montserrat"/>-->
+    <!--        </RadioGroup>-->
+
+    <!--    </LinearLayout>-->
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="81dp"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:weightSum="2"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvYears"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:text="Select Year"
-            android:textSize="30dp"
-            android:textColor="#FFFFFF"
-            android:fontFamily="@font/montserrat"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="5"
+            android:background="@drawable/card_background"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginRight="50dp">
 
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="202dp"
-            tools:layout_editor_absoluteY="246dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="5">
 
-            <RadioButton
-                android:id="@+id/rb_fy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="First Year"
-                android:onClick="onRadioButtonClicked"
-                android:textColor="#FFFFFF"
-                android:textSize="20dp"
-                android:padding="5dp"
-                android:layout_marginTop="40dp"
-                android:fontFamily="@font/montserrat"/>
-            <RadioButton
-                android:id="@+id/rb_sy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Second Year"
-                android:onClick="onRadioButtonClicked"
-                android:textColor="#FFFFFF"
-                android:textSize="20dp"
-                android:padding="5dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/montserrat"/>
-        </RadioGroup>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/top_left_corner_white"
+                    android:textColor="#232323"
+                    android:text="First Year"
+                    android:fontFamily="@font/montserrat"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMaxTextSize="26sp"
+                    android:autoSizeMinTextSize="16sp"
+                    android:autoSizeStepGranularity="2sp"
+                    android:textStyle="bold"
+                    android:id="@+id/rb_fy"
+                    android:gravity="center_vertical|center_horizontal" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/bottom_left_corner_white"
+                    android:textColor="#6b6b6b"
+                    android:text="All the official file server study material is just one click away"
+                    android:fontFamily="@font/montserrat"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMaxTextSize="22sp"
+                    android:autoSizeMinTextSize="16sp"
+                    android:autoSizeStepGranularity="2sp"
+                    android:gravity="top|center_horizontal"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/rb_fy2"/>
+
+
+            </LinearLayout>
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/top_bottom_right_corner_white"
+                android:drawableRight="@drawable/ic_arrow_forward_black_24dp"
+                android:gravity="center"
+                android:id="@+id/rb_fy3"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="5"
+            android:background="@drawable/card_background"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="50dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/top_left_corner_white"
+                    android:textColor="#232323"
+                    android:text="Second Year"
+                    android:fontFamily="@font/montserrat"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMaxTextSize="26sp"
+                    android:autoSizeMinTextSize="16sp"
+                    android:autoSizeStepGranularity="2sp"
+                    android:textStyle="bold"
+                    android:id="@+id/rb_sy"
+                    android:gravity="center_vertical|center_horizontal" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/bottom_left_corner_white"
+                    android:textColor="#6b6b6b"
+                    android:text="All the official file server study material is just one click away"
+                    android:fontFamily="@font/montserrat"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMaxTextSize="22sp"
+                    android:autoSizeMinTextSize="16sp"
+                    android:autoSizeStepGranularity="2sp"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="top|center_horizontal"
+                    android:id="@+id/rb_sy2"/>
+
+
+            </LinearLayout>
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/top_bottom_right_corner_white"
+                android:drawableRight="@drawable/ic_arrow_forward_black_24dp"
+                android:gravity="center"
+                android:id="@+id/rb_sy3"/>
+
+        </LinearLayout>
 
     </LinearLayout>
-</RelativeLayout>
+
+</LinearLayout>
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".VideoLecturesActivity">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="52dp"-->
+<!--        android:layout_marginTop="81dp"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvYears"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:text="Select Year"-->
+<!--            android:textSize="30dp"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:fontFamily="@font/montserrat"/>-->
+
+<!--        <RadioGroup-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            tools:layout_editor_absoluteX="202dp"-->
+<!--            tools:layout_editor_absoluteY="246dp">-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/rb_fy"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="First Year"-->
+<!--                android:onClick="onRadioButtonClicked"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:textSize="20dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:layout_marginTop="40dp"-->
+<!--                android:fontFamily="@font/montserrat"/>-->
+<!--            <RadioButton-->
+<!--                android:id="@+id/rb_sy"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Second Year"-->
+<!--                android:onClick="onRadioButtonClicked"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:textSize="20dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:fontFamily="@font/montserrat"/>-->
+<!--        </RadioGroup>-->
+
+<!--    </LinearLayout>-->
+<!--</RelativeLayout>-->
