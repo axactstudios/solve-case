@@ -25,7 +25,7 @@
             android:fontFamily="@font/montserrat"
             android:gravity="right"
             android:padding="40dp"
-            android:text="Which Stream??"
+            android:text="Which Year??"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
 
@@ -133,6 +133,8 @@
                     android:autoSizeMaxTextSize="22sp"
                     android:autoSizeMinTextSize="16sp"
                     android:autoSizeStepGranularity="2sp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
                     android:gravity="top|center_horizontal"
                     android:id="@+id/firstYearVideos2"/>
 
@@ -172,7 +174,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="2"
                     android:background="@drawable/top_left_corner_white"
-                    android:textColor="#232323"
+                    android:textColor="#A4A4A4"
                     android:text="Second Year"
                     android:fontFamily="@font/montserrat"
                     android:autoSizeTextType="uniform"
@@ -187,7 +189,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="3"
                     android:background="@drawable/bottom_left_corner_white"
-                    android:textColor="#6b6b6b"
+                    android:textColor="#a4a4a4"
                     android:text="Trying our best... playlist will be released soon"
                     android:fontFamily="@font/montserrat"
                     android:autoSizeTextType="uniform"
@@ -195,6 +197,8 @@
                     android:autoSizeMinTextSize="16sp"
                     android:autoSizeStepGranularity="2sp"
                     android:gravity="top|center_horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
                     android:id="@+id/secondYearVideos2"/>
 
 
@@ -204,7 +208,7 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:background="@drawable/top_bottom_right_corner_white"
-                android:drawableRight="@drawable/ic_arrow_forward_black_24dp"
+                android:drawableRight="@drawable/ic_arrow_forward_disabled_24dp"
                 android:gravity="center"
                 android:id="@+id/secondYearVideos3"/>
 

@@ -1,117 +1,307 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VideoLecturesActivity">
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:background="#232323"
+    >
+    <com.github.florent37.diagonallayout.DiagonalLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:elevation="30dp"
+        app:diagonal_angle="10"
+        app:diagonal_gravity="right|bottom"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/r1"
+            android:text="Subjects"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="36sp"
+            android:autoSizeMinTextSize="16sp"
+            android:gravity="right"
+            android:padding="20dp"/>
+
+    </com.github.florent37.diagonallayout.DiagonalLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="81dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/tvYears"
-            android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:weightSum="8"
+        android:gravity="center">
+        <Button
+            android:id="@+id/rb_prob"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:text="Select Subject :"
-            android:textSize="30dp"
-            android:textColor="#FFFFFF"
-            android:fontFamily="@font/montserrat"/>
+            android:autoSizeMaxTextSize="22sp"
+            android:autoSizeMinTextSize="16sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/card_background"
+            android:drawableRight="@drawable/ic_arrow_forward_black_20dp"
+            android:elevation="0dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="left|center_vertical"
 
-        <RadioGroup
-            android:layout_width="wrap_content"
+            android:text="Probability"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            />
+
+        <Button
+            android:id="@+id/rb_os"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="202dp"
-            tools:layout_editor_absoluteY="246dp">
-
-            <RadioButton
-                android:id="@+id/rb_prob"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Probability"
-                android:onClick="onRadioButtonClicked"
-                android:textColor="#FFFFFF"
-                android:textSize="20dp"
-                android:padding="5dp"
-                android:layout_marginTop="40dp"
-                android:fontFamily="@font/montserrat"/>
-            <RadioButton
-                android:id="@+id/rb_os"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Operating System"
-                android:onClick="onRadioButtonClicked"
-                android:textColor="#FFFFFF"
-                android:textSize="20dp"
-                android:padding="5dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/montserrat"/>
-            <RadioButton
-                android:id="@+id/rb_dsp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Digital Signal Processing"
-                android:onClick="onRadioButtonClicked"
-                android:textColor="#FFFFFF"
-                android:textSize="20dp"
-                android:padding="5dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/montserrat"/>
-            <RadioButton
-                android:id="@+id/rb_ds"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Digital System"
-                android:onClick="onRadioButtonClicked"
-                android:textColor="#FFFFFF"
-                android:textSize="20dp"
-                android:padding="5dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/montserrat"/>
-
-            <RadioButton
-                android:id="@+id/rb_adc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Analog and Digital Communication"
-                android:onClick="onRadioButtonClicked"
-                android:textColor="#FFFFFF"
-                android:textSize="20dp"
-                android:padding="5dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/montserrat"/>
-
-            <RadioButton
-                android:id="@+id/rb_dcd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Digital Circuit Design"
-                android:onClick="onRadioButtonClicked"
-                android:textColor="#FFFFFF"
-                android:textSize="20dp"
-                android:padding="5dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/montserrat"/>
-
-            <RadioButton
-                android:id="@+id/rb_algo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Algorithms and Problem Solving"
-                android:onClick="onRadioButtonClicked"
-                android:textColor="#FFFFFF"
-                android:textSize="20dp"
-                android:padding="5dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/montserrat"/>
-
-        </RadioGroup>
+            android:autoSizeMaxTextSize="22sp"
+            android:autoSizeMinTextSize="16sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/card_background"
+            android:drawableRight="@drawable/ic_arrow_forward_black_20dp"
+            android:elevation="0dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="left|center_vertical"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Operating System"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            />
+        <Button
+            android:id="@+id/rb_dsp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="22sp"
+            android:autoSizeMinTextSize="16sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/card_background"
+            android:drawableRight="@drawable/ic_arrow_forward_black_20dp"
+            android:elevation="0dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="left|center_vertical"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Digital Signal Processing"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            />
+        <Button
+            android:id="@+id/rb_ds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="22sp"
+            android:autoSizeMinTextSize="16sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/card_background"
+            android:drawableRight="@drawable/ic_arrow_forward_black_20dp"
+            android:elevation="0dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="left|center_vertical"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Digital System"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            />
+        <Button
+            android:id="@+id/rb_adc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="22sp"
+            android:autoSizeMinTextSize="16sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/card_background"
+            android:drawableRight="@drawable/ic_arrow_forward_black_20dp"
+            android:elevation="0dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="left|center_vertical"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Analog and Digital Communication"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            />
+        <Button
+            android:id="@+id/rb_dcd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="22sp"
+            android:autoSizeMinTextSize="16sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/card_background"
+            android:drawableRight="@drawable/ic_arrow_forward_black_20dp"
+            android:elevation="0dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="left|center_vertical"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Digital Circuit Design"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            />
+        <Button
+            android:id="@+id/rb_algo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="22sp"
+            android:autoSizeMinTextSize="16sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/card_background"
+            android:drawableRight="@drawable/ic_arrow_forward_black_20dp"
+            android:elevation="0dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="left|center_vertical"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Algorithms and Problem Solving"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            />
 
     </LinearLayout>
-</RelativeLayout>
+
+</LinearLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".VideoLecturesActivity">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="52dp"-->
+<!--        android:layout_marginTop="81dp"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvYears"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:text="Select Subject :"-->
+<!--            android:textSize="30dp"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:fontFamily="@font/montserrat"/>-->
+
+<!--        <RadioGroup-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            tools:layout_editor_absoluteX="202dp"-->
+<!--            tools:layout_editor_absoluteY="246dp">-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/rb_prob"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Probability"-->
+<!--                android:onClick="onRadioButtonClicked"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:textSize="20dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:layout_marginTop="40dp"-->
+<!--                android:fontFamily="@font/montserrat"/>-->
+<!--            <RadioButton-->
+<!--                android:id="@+id/rb_os"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Operating System"-->
+<!--                android:onClick="onRadioButtonClicked"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:textSize="20dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:fontFamily="@font/montserrat"/>-->
+<!--            <RadioButton-->
+<!--                android:id="@+id/rb_dsp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Digital Signal Processing"-->
+<!--                android:onClick="onRadioButtonClicked"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:textSize="20dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:fontFamily="@font/montserrat"/>-->
+<!--            <RadioButton-->
+<!--                android:id="@+id/rb_ds"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Digital System"-->
+<!--                android:onClick="onRadioButtonClicked"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:textSize="20dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:fontFamily="@font/montserrat"/>-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/rb_adc"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Analog and Digital Communication"-->
+<!--                android:onClick="onRadioButtonClicked"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:textSize="20dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:fontFamily="@font/montserrat"/>-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/rb_dcd"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Digital Circuit Design"-->
+<!--                android:onClick="onRadioButtonClicked"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:textSize="20dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:fontFamily="@font/montserrat"/>-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/rb_algo"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Algorithms and Problem Solving"-->
+<!--                android:onClick="onRadioButtonClicked"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:textSize="20dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:fontFamily="@font/montserrat"/>-->
+
+<!--        </RadioGroup>-->
+
+<!--    </LinearLayout>-->
+<!--</RelativeLayout>-->

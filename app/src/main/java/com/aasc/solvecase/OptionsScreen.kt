@@ -53,6 +53,12 @@ class OptionsScreen : AppCompatActivity() {
             val intent = Intent(this, ContactPage::class.java)
             startActivity(intent)
         }
+        invite.setOnClickListener {
+            //TODO: write code to invite through whatsapp
+        }
+        invite_1.setOnClickListener {
+            //TODO: write code to invite through whatsapp again
+        }
     }
 
 }

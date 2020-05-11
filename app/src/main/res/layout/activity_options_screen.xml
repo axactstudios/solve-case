@@ -174,8 +174,8 @@ android:src="@drawable/ic_education"
 
                 <ImageButton
                     android:background="@drawable/card_background"
-                    android:src="@drawable/ic_love"
-                    android:id="@+id/contributors"                    android:layout_width="match_parent"
+                    android:src="@drawable/ic_party"
+                    android:id="@+id/invite"                    android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1.25"
                     />
@@ -184,8 +184,8 @@ android:src="@drawable/ic_education"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="0.75"
-                    android:id="@+id/contributors_1"
-                    android:text="Top&#10;Contributors"                    android:textStyle="bold"
+                    android:id="@+id/invite_1"
+                    android:text="Invite&#10;Friends"                    android:textStyle="bold"
 
                     android:fontFamily="@font/montserrat"
                     android:textColor="@android:color/black"
