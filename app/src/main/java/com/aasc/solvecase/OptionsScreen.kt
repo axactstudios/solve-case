@@ -54,10 +54,18 @@ class OptionsScreen : AppCompatActivity() {
             startActivity(intent)
         }
         invite.setOnClickListener {
-            //TODO: write code to invite through whatsapp
+            val intent= Intent()
+            intent.action= Intent.ACTION_SEND
+            intent.putExtra(Intent.EXTRA_TEXT, "Hey I started using this awesome app solve-case, It is a complete package for us, it contains all the study material and assignment solutions. Moreover it also has lecture videos from the best teachers on all the topics of our course. Download the app now from playstore :: https://play.google.com/store/apps/details?id=com.aasc.solvecase")
+            intent.type= "text/plain"
+            startActivity(Intent.createChooser(intent, "Share on:"))
         }
         invite_1.setOnClickListener {
-            //TODO: write code to invite through whatsapp again
+            val intent= Intent()
+            intent.action= Intent.ACTION_SEND
+            intent.putExtra(Intent.EXTRA_TEXT, "Hey I started using this awesome app solve-case, It is a complete package for us, it contains all the study material and assignment solutions. Moreover it also has lecture videos from the best teachers on all the topics of our course. Download the app now from playstore :: https://play.google.com/store/apps/details?id=com.aasc.solvecase")
+            intent.type= "text/plain"
+            startActivity(Intent.createChooser(intent, "Share on:"))
         }
     }
 
