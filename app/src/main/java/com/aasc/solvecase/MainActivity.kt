@@ -1,13 +1,13 @@
 package com.aasc.solvecase
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-
 import kotlinx.android.synthetic.main.activity_main.*
-import java.lang.Exception
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         val background = object : Thread(){
             override fun run() {
                 try{
