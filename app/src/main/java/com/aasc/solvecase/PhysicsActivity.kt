@@ -27,7 +27,7 @@ class PhysicsActivity : AppCompatActivity(), onVideoItemClickListener {
 
         video.add(
             videoDetailsModel(
-                "Basic idea of Cartesian, cyclinderical coordinate system",
+                "Basic idea of Cartesian, cyclindrical coordinate system",
                 "zKnVOfWwJqk"
             )
         )
@@ -52,18 +52,18 @@ class PhysicsActivity : AppCompatActivity(), onVideoItemClickListener {
                 "IMf9ZNUYKGk"
             )
         )
-        video.add(videoDetailsModel("Laplace and Poisson’s equations", "lKnLnnbY4"))
+        video.add(videoDetailsModel("Laplace and Poisson’s equations", "IVRIw36CAWs"))
         video.add(
             videoDetailsModel(
                 "Treatment of electrostatic problems using Laplace and Poisson’s equations in spherical coordinate system",
                 "YBW7zHE_rWo"
             )
         )
-        video.add(videoDetailsModel("Displacement current", "GT590AhLD0k"))
+        video.add(videoDetailsModel("Displacement current", "p0q9PgYoXDc"))
         video.add(
             videoDetailsModel(
                 "Maxwell’s equations in free space and dielectric media (both differential and integral forms)",
-                "6WjEt8VRntY"
+                "nEVIWCEIDIA"
             )
         )
         video.add(
