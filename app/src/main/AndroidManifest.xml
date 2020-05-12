@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.aasc.solvecase"
+    package="com.axactstudios.solvecase"
     tools:ignore="ExtraText">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -15,76 +15,75 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".study_material.DigitalCircuitDesign" android:theme="@style/AppTheme" ></activity>
-        <activity android:name=".study_material.AnalogAndDigitalCommunication" android:theme="@style/AppTheme" />
-        <activity android:name=".study_material.DigitalSystem" android:theme="@style/AppTheme" />
-        <activity android:name=".study_material.DigitalSignalProcessing" android:theme="@style/AppTheme" />
-        <activity android:name=".study_material.OperatingSystem" android:theme="@style/AppTheme" />
-        <activity android:name=".study_material.AlgorithmsAndProblemSolving" android:theme="@style/AppTheme" />
-        <activity android:name=".study_material.Probability" android:theme="@style/AppTheme" />
+        <activity android:name="com.axactstudios.solvecase.study_material.DigitalCircuitDesign" android:theme="@style/AppTheme" ></activity>
+        <activity android:name="com.axactstudios.solvecase.study_material.AnalogAndDigitalCommunication" android:theme="@style/AppTheme" />
+        <activity android:name="com.axactstudios.solvecase.study_material.DigitalSystem" android:theme="@style/AppTheme" />
+        <activity android:name="com.axactstudios.solvecase.study_material.DigitalSignalProcessing" android:theme="@style/AppTheme" />
+        <activity android:name="com.axactstudios.solvecase.study_material.OperatingSystem" android:theme="@style/AppTheme" />
+        <activity android:name="com.axactstudios.solvecase.study_material.AlgorithmsAndProblemSolving" android:theme="@style/AppTheme" />
+        <activity android:name="com.axactstudios.solvecase.study_material.Probability" android:theme="@style/AppTheme" />
         <activity
-            android:name=".study_material.EsActivity"
+            android:name="com.axactstudios.solvecase.study_material.EsActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".study_material.PhysicsActivity"
+            android:name="com.axactstudios.solvecase.study_material.PhysicsActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".study_material.MathsActivity"
+            android:name="com.axactstudios.solvecase.study_material.MathsActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".study_material.SDFActivity"
+            android:name="com.axactstudios.solvecase.study_material.SDFActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".study_material.SecondYearStudyMaterial" />
-        <activity android:name=".study_material.FirstYearStudyMaterial" />
-        <activity android:name=".YearActivity" />
+        <activity android:name="com.axactstudios.solvecase.study_material.SecondYearStudyMaterial" />
+        <activity android:name="com.axactstudios.solvecase.study_material.FirstYearStudyMaterial" />
+        <activity android:name="com.axactstudios.solvecase.YearActivity" />
         <activity android:name=".subject_screens.YearActivity" />
-        <activity android:name=".subject_screens.SecondYearSubjectsBiotech" />
-        <activity android:name=".FileListScreen2" />
-        <activity android:name=".subject_screens.SecondYearSubjectsECE" />
-        <activity android:name=".subject_screens.FirstYearBiotechSubjects" />
-        <activity android:name=".OptionsScreen" />
-        <activity android:name=".StreamSelector" />
+        <activity android:name="com.axactstudios.solvecase.subject_screens.SecondYearSubjectsBiotech" />
+        <activity android:name="com.axactstudios.solvecase.FileListScreen2" />
+        <activity android:name="com.axactstudios.solvecase.subject_screens.SecondYearSubjectsECE" />
+        <activity android:name="com.axactstudios.solvecase.subject_screens.FirstYearBiotechSubjects" />
+        <activity android:name="com.axactstudios.solvecase.OptionsScreen" />
+        <activity android:name="com.axactstudios.solvecase.StreamSelector" />
         <activity android:name=".PhoneActivity" />
-        <activity android:name=".OptionsScreen" />
         <activity android:name=".Test" />
-        <activity android:name=".ViewActivity" />
+        <activity android:name="com.axactstudios.solvecase.ViewActivity" />
         <activity
-            android:name=".FundamentalsofComputer"
+            android:name="com.axactstudios.solvecase.FundamentalsofComputer"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".BasicMathsActivity"
+            android:name="com.axactstudios.solvecase.BasicMathsActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".SdfActivity"
+            android:name="com.axactstudios.solvecase.SdfActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".PhysicsActivity"
+            android:name="com.axactstudios.solvecase.PhysicsActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".ESActivity"
+            android:name="com.axactstudios.solvecase.ESActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".YouTubePlayerActivity" />
+        <activity android:name="com.axactstudios.solvecase.YouTubePlayerActivity" />
         <activity
-            android:name=".MathsActivity"
+            android:name="com.axactstudios.solvecase.MathsActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".SecondYearActivity" />
-        <activity android:name=".FirstYearActivity" />
-        <activity android:name=".VideoLecturesActivity" />
+        <activity android:name="com.axactstudios.solvecase.SecondYearActivity" />
+        <activity android:name="com.axactstudios.solvecase.FirstYearActivity" />
+        <activity android:name="com.axactstudios.solvecase.VideoLecturesActivity" />
         <activity
-            android:name=".ContactPage"
+            android:name="com.axactstudios.solvecase.ContactPage"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".KnowDevelopers"
+            android:name="com.axactstudios.solvecase.KnowDevelopers"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SignupActivity"
+            android:name="com.axactstudios.solvecase.SignupActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".WebViewActivity" />
+        <activity android:name="com.axactstudios.solvecase.WebViewActivity" />
         <activity
-            android:name=".LoginActivity"
+            android:name="com.axactstudios.solvecase.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.axactstudios.solvecase.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -93,16 +92,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SecondActivity"
+            android:name="com.axactstudios.solvecase.SecondActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".subject_screens.FirstYearSubjects"
+            android:name="com.axactstudios.solvecase.subject_screens.FirstYearSubjects"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".subject_screens.SecondYearSubjects"
+            android:name="com.axactstudios.solvecase.subject_screens.SecondYearSubjects"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".FileListScreen"
+            android:name="com.axactstudios.solvecase.FileListScreen"
             android:screenOrientation="portrait" />
 
         <meta-data

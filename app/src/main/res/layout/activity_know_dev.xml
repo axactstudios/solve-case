@@ -14,7 +14,10 @@
         android:layout_weight="2"
         android:background="@drawable/gradient_background_3"
         android:orientation="horizontal"
-        android:padding="30sp"
+        android:paddingTop="30sp"
+        android:paddingRight="30sp"
+        android:paddingLeft="30sp"
+        android:paddingBottom="30sp"
         android:weightSum="4">
         <LinearLayout
             android:layout_width="0dp"
@@ -39,7 +42,11 @@
                 android:textColor="@android:color/white"
                 android:text="Always striving to fulfill your&#10;needs in the most efficient way"
                 android:fontFamily="@font/montserrat"
-                android:autoSizeTextType="uniform"/>
+
+                android:autoSizeTextType="uniform"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="8sp"
+                android:autoSizeStepGranularity="2sp"/>
 
 
         </LinearLayout>
