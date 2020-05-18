@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
                 try{
                     sleep(2000)
 
-                    val intent= Intent(baseContext,LoginActivity::class.java)
+                    val intent= Intent(baseContext,OptionsScreen::class.java)
                     startActivity(intent)
                     finish()
                 } catch(e : Exception){
@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
                 val anim = AnimationUtils.loadAnimation(this,R.anim.top)
         val anim2 = AnimationUtils.loadAnimation(this, R.anim.bottom)
         logo1.startAnimation(anim)
+
        // developer.startAnimation(anim2)
 
 
