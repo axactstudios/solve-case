@@ -15,10 +15,84 @@
       },
       "oauth_client": [
         {
+          "client_id": "402953466200-h2sbc711plbshbv0oks9uthugtg3fqt8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aasc.solvecase",
+            "certificate_hash": "f039ba87bc2d5fb36b1c8a0a98e030ba8abf5c87"
+          }
+        },
+        {
           "client_id": "402953466200-s1ovmc6g91hdmtki6o29jhtd79br108p.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.aasc.solvecase",
+            "certificate_hash": "8835762b750348990b24e0277309328d54dc5a5a"
+          }
+        },
+        {
+          "client_id": "402953466200-f9r4luigclnlqipvjekkqsjqfrr3vri5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQ_HfxeZxS2BN-_WA3KvjyWfuYHbpnU1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402953466200-f9r4luigclnlqipvjekkqsjqfrr3vri5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402953466200:android:9383bdfa9d399d7774352d",
+        "android_client_info": {
+          "package_name": "com.aviral.kuchnaihoraflutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402953466200-f9r4luigclnlqipvjekkqsjqfrr3vri5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQ_HfxeZxS2BN-_WA3KvjyWfuYHbpnU1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402953466200-f9r4luigclnlqipvjekkqsjqfrr3vri5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402953466200:android:ba2d7403bf81683574352d",
+        "android_client_info": {
+          "package_name": "com.axactstudios.solvecase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402953466200-e4ds9eko3clgkeng3hfm8nhlnqq9n94i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.axactstudios.solvecase",
             "certificate_hash": "8835762b750348990b24e0277309328d54dc5a5a"
           }
         },
