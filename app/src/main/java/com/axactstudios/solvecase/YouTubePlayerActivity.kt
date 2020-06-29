@@ -16,7 +16,7 @@ class YouTubePlayerActivity : AppCompatActivity() {
 
         var youtubefragment = supportFragmentManager.findFragmentById(R.id.youtube_fragment)
                 as YouTubePlayerSupportFragment
-        youtubefragment.initialize("AIzaSyAmTYnBEqerz6k52xPljDsU1606H0-1mo0", object : YouTubePlayer.OnInitializedListener {
+        youtubefragment.initialize("api key goes here", object : YouTubePlayer.OnInitializedListener {
 
             override fun onInitializationSuccess(provider: YouTubePlayer.Provider?, player: YouTubePlayer?, wasRestored: Boolean) {
                 if(player==null) return
